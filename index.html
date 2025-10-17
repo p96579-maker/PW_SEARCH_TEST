@@ -1,48 +1,191 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Systems Credentials Search</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Systems Credentials Browser</title>
+  <meta name="theme-color" content="#0b1220">
+  <style>
+    :root { --bg:#0b1220; --panel:#121a2b; --muted:#a6b0cf; --pri:#7c5cff; --card:#0f1524; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:white;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.4}
+    .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+    h1{font-size:22px;margin:0 0 16px}
+    .bar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;background:var(--panel);padding:12px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .bar label{font-size:13.2px;color:var(--muted)}
+    select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #263252;background:#0c1221;color:#e8ecff;outline:none}
+    .btn{padding:10px 14px;border-radius:10px;border:1px solid #2a3660;background:var(--pri);color:white;cursor:pointer;font-weight:600}
+    .btn.secondary{background:#32406d;border-color:#32406d}
+    .toolbar{display:flex;gap:8px;align-items:end}
+    .results{margin-top:16px;display:flex;flex-direction:column;gap:12px}
+    .hidden{display:none !important}
+    .badge{display:inline-block;border:1px solid #32406d;border-radius:999px;padding:2px 8px;font-size:12px;color:#cfe1ff;background:#11182b}
+    .card{background:var(--card);border:1px solid #223052;border-radius:14px;padding:14px;box-shadow:0 8px 20px rgba(0,0,0,.28);width:100%}
+    .title{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+    .kvs{display:grid;grid-template-columns:160px 1fr;gap:6px 14px;margin-top:10px;line-height:1.5}
+    .kvs .k{color:#cfe1ff;opacity:.95;font-weight:600;letter-spacing:.2px}
+    .kvs > div:nth-child(2n){border-bottom:1px dashed #2a3761;padding-bottom:6px;margin-bottom:6px}
+    .kvs > div:nth-last-child(-n+2){border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}
+  </style>
 </head>
 <body>
-<header>
-  <h1>Systems Credentials Search｜系統帳密搜尋</h1>
-  <p class="sub">先揀 System → Category → Equipment，會以卡片方式顯示結果。空白欄位自動隱藏。</p>
-</header>
-
-<section class="filters">
-  <div class="select-group">
-    <label>System</label>
-    <select id="systemSelect">
-      <option value="">全部系統</option>
-    </select>
+<div class="wrap">
+  <h1>Systems Credentials Browser</h1>
+  <div class="bar">
+    <div>
+      <label>System</label>
+      <select id="selSystem">
+        <option value="">All systems</option>
+      </select>
+    </div>
+    <div>
+      <label>Category</label>
+      <select id="selCategory" disabled>
+        <option value="">All categories</option>
+      </select>
+    </div>
+    <div>
+      <label>Equipment</label>
+      <select id="selEquipment" disabled>
+        <option value="">All equipment</option>
+      </select>
+    </div>
+    <div class="toolbar">
+      <button id="showBtn" class="btn" disabled>Show results</button>
+      <button id="clearBtn" class="btn secondary">Clear</button>
+      <span id="count" class="badge hidden"></span>
+    </div>
   </div>
-  <div class="select-group">
-    <label>Category</label>
-    <select id="categorySelect" disabled>
-      <option value="">全部分類</option>
-    </select>
-  </div>
-  <div class="select-group">
-    <label>Equipment</label>
-    <select id="equipmentSelect" disabled>
-      <option value="">全部設備</option>
-    </select>
-  </div>
-  <div class="search-group">
-    <input id="freeText" type="text" placeholder="自由文字搜尋（Login/Password/IP/Remark）" />
-    <button id="clearBtn">清除</button>
-  </div>
-</section>
 
-<section id="results" class="cards"></section>
+  <div id="results" class="results hidden"></div>
 
-<footer>
-  <small>資料來源：5 個 Excel｜合拼儲存格已以向下填充處理。若欄位全空白則不顯示該欄位；若整行無資料則不顯示卡片。</small>
-</footer>
+  <div class="footer">
+    <span>Source: consolidated from 5 Excel files. Empty fields are hidden. Rows with no data are skipped.</span>
+    <span id="meta"></span>
+  </div>
+</div>
 
-<script src="app.js"></script>
+<script>
+const $ = (s)=>document.querySelector(s);
+const $$ = (s)=>Array.from(document.querySelectorAll(s));
+const selSys = $("#selSystem");
+const selCat = $("#selCategory");
+const selEqp = $("#selEquipment");
+const showBtn = $("#showBtn");
+const clearBtn = $("#clearBtn");
+const results = $("#results");
+const count = $("#count");
+const meta = $("#meta");
+
+let DATA = [];
+
+async function load(){
+  const r = await fetch('data.json?_=' + Date.now());
+  DATA = await r.json();
+  meta.textContent = DATA.length + ' rows';
+  buildSystem();
+}
+function uniq(arr){ return [...new Set(arr.filter(Boolean))].sort((a,b)=>a.localeCompare(b,'en')); }
+function fill(sel, values, firstLabel){
+  const prev = sel.value;
+  sel.innerHTML = '';
+  const mk = (v, label)=> {
+    const opt = document.createElement('option');
+    opt.value = v;
+    opt.textContent = v || label;
+    return opt;
+  };
+  sel.appendChild(mk('', firstLabel));
+  values.forEach(v => sel.appendChild(mk(v, firstLabel)));
+  sel.value = values.includes(prev) ? prev : '';
+}
+
+function buildSystem(){
+  fill(selSys, uniq(DATA.map(d=>d.System)), 'All systems');
+  selSys.disabled = false;
+  changeSystem();
+}
+function changeSystem(){
+  const sys = selSys.value;
+  const subset = sys ? DATA.filter(d=>d.System===sys) : DATA;
+  fill(selCat, uniq(subset.map(d=>d.Category)), 'All categories');
+  selCat.disabled = false;
+  changeCategory();
+}
+function changeCategory(){
+  const sys = selSys.value;
+  const cat = selCat.value;
+  let subset = DATA.slice();
+  if (sys) subset = subset.filter(d=>d.System===sys);
+  if (cat) subset = subset.filter(d=>d.Category===cat);
+  fill(selEqp, uniq(subset.map(d=>d.Equipment)), 'All equipment');
+  selEqp.disabled = false;
+  // Only enable Show when at least one selection is made
+  showBtn.disabled = !(selSys.value || selCat.value || selEqp.value);
+}
+function getFiltered(){
+  const sys = selSys.value;
+  const cat = selCat.value;
+  const eqp = selEqp.value;
+  let subset = DATA.slice();
+  if (sys) subset = subset.filter(d=>d.System===sys);
+  if (cat) subset = subset.filter(d=>d.Category===cat);
+  if (eqp) subset = subset.filter(d=>d.Equipment===eqp);
+  // hide rows with no meaningful fields
+  subset = subset.filter(d => (d['Login ID']||d['Password']||d['IP']||d['Remark']||d['Category']||d['Equipment']));
+  return subset;
+}
+function render(){
+  const rows = getFiltered();
+  results.innerHTML = '';
+  if (!rows.length){
+    results.classList.add('hidden');
+    count.classList.add('hidden');
+    return;
+  }
+  results.classList.remove('hidden');
+  count.classList.remove('hidden');
+  count.textContent = rows.length + ' result' + (rows.length>1?'s':'');
+  const escapeHtml = (s)=> String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  for (const r of rows){
+    const card = document.createElement('div');
+    card.className = 'card';
+    const title = document.createElement('div');
+    title.className = 'title';
+    const pillSys = document.createElement('span'); pillSys.className = 'badge'; pillSys.textContent = r.System || '—';
+    const label = document.createElement('div'); label.innerHTML = `<b>${escapeHtml(r.Category||'Uncategorized')}</b> · ${escapeHtml(r.Equipment||'Unnamed')}`;
+    title.appendChild(pillSys); title.appendChild(label);
+    const kv = document.createElement('div'); kv.className = 'kvs';
+    const addRow = (k, v)=>{ const txt = String(v||'').trim(); if(!txt || txt.toLowerCase()==='nan') return;
+      const K = document.createElement('div'); K.className='k'; K.textContent = k;
+      const V = document.createElement('div'); V.textContent = txt;
+      kv.appendChild(K); kv.appendChild(V);
+    };
+    addRow('Login ID', r['Login ID']);
+    addRow('Password', r['Password']);
+    addRow('IP', r['IP']);
+    addRow('Remark', r['Remark']);
+    card.appendChild(title);
+    card.appendChild(kv);
+    results.appendChild(card);
+  }
+}
+
+selSys.addEventListener('change', ()=>{ changeSystem(); results.classList.add('hidden'); count.classList.add('hidden'); showBtn.disabled = !(selSys.value || selCat.value || selEqp.value); });
+selCat.addEventListener('change', ()=>{ changeCategory(); results.classList.add('hidden'); count.classList.add('hidden'); showBtn.disabled = !(selSys.value || selCat.value || selEqp.value); });
+selEqp.addEventListener('change', ()=>{ showBtn.disabled = !(selSys.value || selCat.value || selEqp.value); });
+
+showBtn.addEventListener('click', render);
+clearBtn.addEventListener('click', ()=>{
+  selSys.value=''; changeSystem();
+  selCat.value=''; changeCategory();
+  selEqp.value='';
+  results.classList.add('hidden'); count.classList.add('hidden');
+  showBtn.disabled = true;
+});
+
+load();
+</script>
 </body>
 </html>
