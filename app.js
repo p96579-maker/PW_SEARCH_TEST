@@ -1,117 +1,146 @@
-(function(){
-  const els = {
-    system: document.getElementById('system'),
-    category: document.getElementById('category'),
-    equipment: document.getElementById('equipment'),
-    grid: document.getElementById('grid'),
-    count: document.getElementById('count'),
-    empty: document.getElementById('empty'),
-    reset: document.getElementById('reset'),
-  };
+(async function(){
+  const byId = (id)=>document.getElementById(id);
+  const $system = byId('systemSelect');
+  const $category = byId('categorySelect');
+  const $equipment = byId('equipmentSelect');
+  const $free = byId('freeText');
+  const $clear = byId('clearBtn');
+  const $results = byId('results');
 
-  let DATA = [];
-  let filters = { system: '', category: '', equipment: '' };
-
-  function uniq(arr) { return [...new Set(arr.filter(Boolean))].sort(); }
-  function opt(text, value){ const o=document.createElement('option'); o.textContent=text; o.value=value; return o; }
-  function clearChildren(node){ while(node.firstChild) node.removeChild(node.firstChild); }
-
-  function populateSystems() {
-    const systems = uniq(DATA.map(x => x['System']));
-    clearChildren(els.system);
-    els.system.append(opt('— All Systems —',''));
-    systems.forEach(s => els.system.append(opt(s, s)));
+  let data = [];
+  try {
+    const res = await fetch('data.json');
+    data = await res.json();
+  } catch (e) {
+    console.error('Failed to load data.json', e);
   }
 
-  function populateCategories() {
-    const subset = filters.system ? DATA.filter(x => x['System']===filters.system) : DATA;
-    const categories = uniq(subset.map(x => x['Category']));
-    clearChildren(els.category);
-    els.category.append(opt('— All Categories —',''));
-    categories.forEach(c => els.category.append(opt(c, c)));
+  // Helper: unique sorted list
+  const uniq = arr => [...new Set(arr.filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant-u-co-stroke'));
+
+  // Build dependent options
+  function rebuildFilters(){
+    const systems = uniq(data.map(d=>d.System));
+    fillSelect($system, ["", ...systems], "全部系統");
+
+    // If a system is already selected (back button), keep it
+    changeSystem();
   }
 
-  function populateEquipment() {
-    let subset = DATA;
-    if (filters.system) subset = subset.filter(x => x['System']===filters.system);
-    if (filters.category) subset = subset.filter(x => x['Category']===filters.category);
-    const equips = uniq(subset.map(x => x['Equipment']));
-    clearChildren(els.equipment);
-    els.equipment.append(opt('— All Equipment —',''));
-    equips.forEach(e => els.equipment.append(opt(e, e)));
+  function fillSelect(sel, values, allLabel){
+    const current = sel.value;
+    sel.innerHTML = '';
+    const mk = (v, label)=> {
+      const opt = document.createElement('option');
+      opt.value = v;
+      opt.textContent = v || allLabel;
+      return opt;
+    };
+    values.forEach(v=> sel.appendChild(mk(v, allLabel)));
+    sel.value = values.includes(current) ? current : '';
   }
 
-  function render() {
-    let subset = DATA;
-    if (filters.system) subset = subset.filter(x => x['System']===filters.system);
-    if (filters.category) subset = subset.filter(x => x['Category']===filters.category);
-    if (filters.equipment) subset = subset.filter(x => x['Equipment']===filters.equipment);
+  function changeSystem(){
+    const sys = $system.value;
+    const subset = sys ? data.filter(d=>d.System===sys) : data;
+    const categories = uniq(subset.map(d=>d.Category));
+    fillSelect($category, ["", ...categories], "全部分類");
+    $category.disabled = false;
 
-    clearChildren(els.grid);
-    const n = subset.length;
-    els.count.textContent = n + (n===1 ? ' result' : ' results');
-    els.empty.style.display = n ? 'none' : 'block';
-
-    subset.forEach(row => {
-      const card = document.createElement('div');
-      card.className = 'card';
-
-      function rowEl(key, val) {
-        const R = document.createElement('div'); R.className = 'row';
-        const K = document.createElement('div'); K.className = 'key'; K.textContent = key;
-        const V = document.createElement('div'); V.className = 'val'; V.textContent = val || '';
-        R.append(K, V);
-        return R;
-      }
-
-      card.append(rowEl('Category', row['Category'] || ''));
-      card.append(rowEl('Equipment', row['Equipment'] || ''));
-      if (row['Login ID']) card.append(rowEl('Login ID', row['Login ID']));
-      if (row['Password']) card.append(rowEl('Password', row['Password']));
-      if (row['IP']) card.append(rowEl('IP', row['IP']));
-      if (row['Remark']) card.append(rowEl('Remark', row['Remark']));
-
-      const chips = document.createElement('div'); chips.className = 'chips';
-      const chipSys = document.createElement('span'); chipSys.className='chip'; chipSys.textContent = row['System'] || '—';
-      chips.append(chipSys);
-      card.append(chips);
-
-      els.grid.append(card);
-    });
+    changeCategory();
   }
 
-  function onChange() {
-    filters.system = els.system.value;
-    filters.category = els.category.value;
-    filters.equipment = els.equipment.value;
-    populateCategories();
-    populateEquipment();
-    // preserve current chosen if still present
-    if (![...els.category.options].some(o => o.value===filters.category)) {
-      els.category.value=''; filters.category='';
-    } else {
-      els.category.value=filters.category;
-    }
-    if (![...els.equipment.options].some(o => o.value===filters.equipment)) {
-      els.equipment.value=''; filters.equipment='';
-    } else {
-      els.equipment.value=filters.equipment;
-    }
+  function changeCategory(){
+    const sys = $system.value;
+    const cat = $category.value;
+    let subset = data;
+    if (sys) subset = subset.filter(d=>d.System===sys);
+    if (cat) subset = subset.filter(d=>d.Category===cat);
+    const equips = uniq(subset.map(d=>d.Equipment));
+    fillSelect($equipment, ["", ...equips], "全部設備");
+    $equipment.disabled = false;
+
     render();
   }
 
-  function resetFilters(){
-    filters = { system: '', category: '', equipment: '' };
-    els.system.value=''; els.category.value=''; els.equipment.value='';
-    populateCategories(); populateEquipment(); render();
+  function render(){
+    const sys = $system.value;
+    const cat = $category.value;
+    const eqp = $equipment.value;
+    const q = ($free.value||'').trim().toLowerCase();
+
+    let subset = data.slice();
+    if (sys) subset = subset.filter(d=>d.System===sys);
+    if (cat) subset = subset.filter(d=>d.Category===cat);
+    if (eqp) subset = subset.filter(d=>d.Equipment===eqp);
+    if (q){
+      subset = subset.filter(d=>{
+        return ['Login ID','Password','IP','Remark','Category','Equipment','System'].some(k=>{
+          const v = (d[k]||'').toString().toLowerCase();
+          return v.includes(q);
+        });
+      });
+    }
+
+    // Hide cards that have no meaningful fields
+    subset = subset.filter(d=>{
+      return (d['Login ID']||d['Password']||d['IP']||d['Remark']||d['Category']||d['Equipment']);
+    });
+
+    $results.innerHTML = '';
+    if (!subset.length){
+      const div = document.createElement('div');
+      div.className = 'no-data';
+      div.textContent = '沒有結果 / No results';
+      $results.appendChild(div);
+      return;
+    }
+
+    subset.forEach(d=>{
+      const card = document.createElement('div');
+      card.className = 'card';
+      const title = document.createElement('h3');
+      title.innerHTML = `
+        <span class="badge">${d.System||'—'}</span>
+        ${escapeHtml(d.Category||'未分類')} · ${escapeHtml(d.Equipment||'未命名')}
+      `;
+      card.appendChild(title);
+
+      const kv = document.createElement('div'); kv.className='kv';
+      function row(k, v){
+        if (!v || !String(v).trim()) return;
+        const K = document.createElement('div'); K.className='k'; K.textContent = k;
+        const V = document.createElement('div'); V.className='v'; V.textContent = v;
+        kv.appendChild(K); kv.appendChild(V);
+      }
+      row('Login ID', d['Login ID']);
+      row('Password', d['Password']);
+      row('IP', d['IP']);
+      row('Remark', d['Remark']);
+      card.appendChild(kv);
+
+      $results.appendChild(card);
+    });
   }
 
-  fetch('data/data.json')
-    .then(r => r.json())
-    .then(d => { DATA = d; populateSystems(); populateCategories(); populateEquipment(); render(); });
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, m=>({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[m]));
+  }
 
-  els.system.addEventListener('change', onChange);
-  els.category.addEventListener('change', onChange);
-  els.equipment.addEventListener('change', onChange);
-  els.reset.addEventListener('click', resetFilters);
+  // Events
+  $system.addEventListener('change', changeSystem);
+  $category.addEventListener('change', changeCategory);
+  $equipment.addEventListener('change', render);
+  $free.addEventListener('input', render);
+  $clear.addEventListener('click', ()=>{
+    $system.value = '';
+    $category.value = '';
+    $equipment.value = '';
+    $free.value = '';
+    changeSystem();
+  });
+
+  rebuildFilters();
 })();

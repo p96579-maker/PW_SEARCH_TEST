@@ -1,0 +1,3032 @@
+[
+  {
+    "System":"Communication System",
+    "Category":"CCTV",
+    "Equipment":"1.1 CCTV camera",
+    "Login ID":"root",
+    "Password":"manager",
+    "IP":"Use onboard CCTV camera IP address to login 1)4 Car Train - 192.168.1xx.11-18 2)2 Car Train - 192.168.1xx.11-14 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark":"Use onboard CCTV camera IP address to login 1)4 Car Train - 192.168.1xx.11-18 2)2 Car Train - 192.168.1xx.11-14 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"CCTV",
+    "Equipment":"1.2 Decoder",
+    "Login ID":"root",
+    "Password":"manager",
+    "IP":"Use respective IP address to login 1)4 Car Train - 192.168.1xx.51-58 2)2 Car Train - 192.168.1xx.51-54 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark":"Use respective IP address to login 1)4 Car Train - 192.168.1xx.51-58 2)2 Car Train - 192.168.1xx.51-54 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"CCTV",
+    "Equipment":"1.3 VCA console (CCTV)",
+    "Login ID":"depot",
+    "Password":"dpass",
+    "IP":"(APM onboard CCTV only) Milestone login via VCA Console(connected VCA server) Server Address: http:\/\/192.168.1.221:95\/ Authentication: Basic authentication",
+    "Remark":"(APM onboard CCTV only) Milestone login via VCA Console(connected VCA server) Server Address: http:\/\/192.168.1.221:95\/ Authentication: Basic authentication",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"CCTV",
+    "Equipment":"1.4 NVR server",
+    "Login ID":"Administrator",
+    "Password":"P534admin",
+    "IP":"T1 Line, IP address: 192.168.8.6\/16 SP Line, IP address: (TBA)",
+    "Remark":"T1 Line, IP address: 192.168.8.6\/16 SP Line, IP address: (TBA)",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"CCTV",
+    "Equipment":"1.5 Smart CCTV Workstation",
+    "Login ID":"APM",
+    "Password":"Apmapm2020!",
+    "IP":"For Smart CCTV console which maintained by Chubb of Electronics Team (All CCTV in Terminal plus APM onboard CCTV video)",
+    "Remark":"For Smart CCTV console which maintained by Chubb of Electronics Team (All CCTV in Terminal plus APM onboard CCTV video)",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.1 Wayside interface server 1",
+    "Login ID":"siriushk",
+    "Password":"M4CRqtID",
+    "IP":"1) For T1L \/ RRL Located at CR40 SER, Old Depot IP address: 192.168.7.3 2) For SPL Located at 1P005 SPL SER (New SER), Old Depot IP address: 192.168.8.3",
+    "Remark":"1) For T1L \/ RRL Located at CR40 SER, Old Depot IP address: 192.168.7.3 2) For SPL Located at 1P005 SPL SER (New SER), Old Depot IP address: 192.168.8.3",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.2 Wayside interface server 2",
+    "Login ID":"siriushk",
+    "Password":"Umjcflnl",
+    "IP":"1) For T1L \/ RRL Located at CR40 SER, Old Depot IP address: 192.168.7.4 2) For SPL Located at 1P005 SPL SER (New SER), Old Depot IP address: 192.168.8.4",
+    "Remark":"1) For T1L \/ RRL Located at CR40 SER, Old Depot IP address: 192.168.7.4 2) For SPL Located at 1P005 SPL SER (New SER), Old Depot IP address: 192.168.8.4",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.5 EH DMS controller",
+    "Login ID":"siriushk",
+    "Password":"rBU52nG3",
+    "IP":"IP address - 192.168.7.20",
+    "Remark":"IP address - 192.168.7.20",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.6 WH DMS controller",
+    "Login ID":"siriushk",
+    "Password":"4z6Spcxh",
+    "IP":"IP address - 192.168.7.40",
+    "Remark":"IP address - 192.168.7.40",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.7 MF DMS controller",
+    "Login ID":"siriushk",
+    "Password":"rp.fa1nW",
+    "IP":"IP address - 192.168.7.100",
+    "Remark":"IP address - 192.168.7.100",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.8 Platform DMS (New for P534)",
+    "Login ID":"super",
+    "Password":"super2006",
+    "IP":"IP address 1)192.168.1.18-21 @ EHD 2)192.168.1.38-41 @ WHA 3)10.1.7.41-52 @ WHD 4)10.1.7.61-72 @ WHR 5)10.1.7.81-92 @ MFA 6)10.1.7.101-112 @ MFR",
+    "Remark":"IP address 1)192.168.1.18-21 @ EHD 2)192.168.1.38-41 @ WHA 3)10.1.7.41-52 @ WHD 4)10.1.7.61-72 @ WHR 5)10.1.7.81-92 @ MFA 6)10.1.7.101-112 @ MFR",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.9 Platform PA AMP",
+    "Login ID":"admin",
+    "Password":"admin",
+    "IP":"1)IP address - 192.168.8.11 @ EH 2)IP address - 192.168.8.12 @ WH 3)IP address - 192.168.8.13@MF 4)IP address - 192.168.8.14 @ T1A 5)IP address - 192.168.8.16 @ Pier",
+    "Remark":"1)IP address - 192.168.8.11 @ EH 2)IP address - 192.168.8.12 @ WH 3)IP address - 192.168.8.13@MF 4)IP address - 192.168.8.14 @ T1A 5)IP address - 192.168.8.16 @ Pier",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.10 T1A DMS controller",
+    "Login ID":"admin",
+    "Password":"admin",
+    "IP":"Controller IP address - 192.168.8.24 Digital Output Device IP address - 192.168.8.34",
+    "Remark":"Controller IP address - 192.168.8.24 Digital Output Device IP address - 192.168.8.34",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.11 Pier DMS Controller",
+    "Login ID":"admin",
+    "Password":"admin",
+    "IP":"Controller IP address - 192.168.8.26 Digital Output Device IP address - 192.168.8.36",
+    "Remark":"Controller IP address - 192.168.8.26 Digital Output Device IP address - 192.168.8.36",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Platform PIS\/PAS",
+    "Equipment":"2.12 FBTC\/CBTC DMS Changeover Server (NVR Server in 1P050)",
+    "Login ID":"Administrator",
+    "Password":"P534admin",
+    "IP":"For SPL DMS changeover from FBTC to CBTC IP Address: 192.168.101.7",
+    "Remark":"For SPL DMS changeover from FBTC to CBTC IP Address: 192.168.101.7",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.1 AP",
+    "Login ID":"root",
+    "Password":"manager",
+    "IP":"Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.1 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark":"Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.1 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.2 PEI",
+    "Login ID":"admin",
+    "Password":"admin",
+    "IP":"Please refer to the onboard comms equipment IP address list 1)4Car Train - 192.168.1xx.21-28 2)2Car Train - 192.168.1xx.21-24 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark":"Please refer to the onboard comms equipment IP address list 1)4Car Train - 192.168.1xx.21-28 2)2Car Train - 192.168.1xx.21-24 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.3 TCX",
+    "Login ID":"admin",
+    "Password":"admin",
+    "IP":"Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.2 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark":"Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.2 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.4 Onboard PA amplifier",
+    "Login ID":"admin",
+    "Password":"admin",
+    "IP":"Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.3 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark":"Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.3 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.5 Onboard DMS",
+    "Login ID":"root",
+    "Password":"erphost",
+    "IP":"Please refer to the onboard comms equipment IP address list 1)4Car Train - 192.168.1xx.31-38 2)2Car Train - 192.168.1xx.31-34 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark":"Please refer to the onboard comms equipment IP address list 1)4Car Train - 192.168.1xx.31-38 2)2Car Train - 192.168.1xx.31-34 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.6a Comms NMS, Windows 10 Login",
+    "Login ID":"1) admin, for Windows 10 login 2) admin, for SyncUP Time Client",
+    "Password":"1) manager, for Windows 10 login 2) admin, for SyncUp Time Client",
+    "IP":"Please refer to the onboard comms equipment IP address list 1)192.168.8.7 for T1,RR @ BCR 2)192.168.8.10 for SP @ BCR 3) 192.168.1.108\/118.35 or 192.168.3.100 or 192.168.9.9 for T1, RR @ CCR 4) 192.168.9.9 for T1, SP @ CCR",
+    "Remark":"Please refer to the onboard comms equipment IP address list 1)192.168.8.7 for T1,RR @ BCR 2)192.168.8.10 for SP @ BCR 3) 192.168.1.108\/118.35 or 192.168.3.100 or 192.168.9.9 for T1, RR @ CCR 4) 192.168.9.9 for T1, SP @ CCR",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.6b Comms NMS, SyncUp Time Client Login",
+    "Login ID":"admin",
+    "Password":"admin",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.7 Comms console (IPPA Paging Station)",
+    "Login ID":"admin",
+    "Password":"admin",
+    "IP":"Please refer to the onboard comms equipment IP address list 1) DCR: 192.168.9.1 @ T1 \/ 192.168.9.2 @ RR \/ 192.168.9.1 @ SP 2) CCR: 192.168.9.11 @ T1 \/ 192.168.9.12 @ RR \/ 192.168.9.11 @ SP 3) TDMO: 192.168.9.21, 192.168.9.2 @ T1 \/ 192.9.25192.168.9.22 @ RR \/ 192.168.9.21 @ SP",
+    "Remark":"Please refer to the onboard comms equipment IP address list 1) DCR: 192.168.9.1 @ T1 \/ 192.168.9.2 @ RR \/ 192.168.9.1 @ SP 2) CCR: 192.168.9.11 @ T1 \/ 192.168.9.12 @ RR \/ 192.168.9.11 @ SP 3) TDMO: 192.168.9.21, 192.168.9.2 @ T1 \/ 192.9.25192.168.9.22 @ RR \/ 192.168.9.21 @ SP",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.8 Onboard Ethernet Network Switch",
+    "Login ID":"root admin",
+    "Password":"manager",
+    "IP":"Please refer to the onboard comms equipment IP address list 1)4Car Train - 192.168.1xx.41-44 2)2Car Train - 192.168.1xx.41-42 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark":"Please refer to the onboard comms equipment IP address list 1)4Car Train - 192.168.1xx.41-44 2)2Car Train - 192.168.1xx.41-42 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.9 Wayside AP",
+    "Login ID":"root",
+    "Password":"manager",
+    "IP":"Please refer to the IP address assignemnt for AP in O&M manual 1)192.168.10.1-46 @ T1 2)192.168.11.1-11 @ RR 3)192.168.12.1-2 @ Depot 4)192.168.13.1-10 @ SP 5)192.168.13.11 @ SP Depot 6)192.168.13.12 @ Tee off to New Depot 7)192.168.13.13-14 @ New Depot",
+    "Remark":"Please refer to the IP address assignemnt for AP in O&M manual 1)192.168.10.1-46 @ T1 2)192.168.11.1-11 @ RR 3)192.168.12.1-2 @ Depot 4)192.168.13.1-10 @ SP 5)192.168.13.11 @ SP Depot 6)192.168.13.12 @ Tee off to New Depot 7)192.168.13.13-14 @ New Depot",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.10 T1L Communication Exchange Server (CXS)",
+    "Login ID":"Not provided by supplier",
+    "Password":"Not provided by supplier",
+    "IP":"CXS1 - 192.168.8.1 CXS2 - 192.168.8.2 Not root\/manager, not admin\/admin",
+    "Remark":"CXS1 - 192.168.8.1 CXS2 - 192.168.8.2 Not root\/manager, not admin\/admin",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.11 SPL Communication Exchange Server (CXS)",
+    "Login ID":"Not provided by supplier",
+    "Password":"Not provided by supplier",
+    "IP":"CXS1 - 192.168.8.1\/16 CXS2 - 192.168.8.2\/16 Not root\/manager, not admin\/admin",
+    "Remark":"CXS1 - 192.168.8.1\/16 CXS2 - 192.168.8.2\/16 Not root\/manager, not admin\/admin",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.12 Core Switch",
+    "Login ID":"admin",
+    "Password":"manager",
+    "IP":"T1 line CS1&2: 192.168.8.200 SP line CS1&2: 192.168.8.200 192.168.8.230",
+    "Remark":"T1 line CS1&2: 192.168.8.200 SP line CS1&2: 192.168.8.200 192.168.8.230",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.13 Access Switch",
+    "Login ID":"admin",
+    "Password":"manager",
+    "IP":"T1 line AS1: 192.168.8.202 T1 line AS2: 192.168.8.203 T1 line AS5: 192.168.8.206 T1 line AS6: 192.168.8.207 T1 line AS7: 192.168.8.208 (ENS team asset) SP line AS1: 192.168.8.202 192.168.8.232 SP line AS2: 192.168.8.203 192.168.8.233 CCR T1L AS1: 192.168.8.220 CCR SPL AS1: 192.168.8.220 192.168.8.250",
+    "Remark":"T1 line AS1: 192.168.8.202 T1 line AS2: 192.168.8.203 T1 line AS5: 192.168.8.206 T1 line AS6: 192.168.8.207 T1 line AS7: 192.168.8.208 (ENS team asset) SP line AS1: 192.168.8.202 192.168.8.232 SP line AS2: 192.168.8.203 192.168.8.233 CCR T1L AS1: 192.168.8.220 CCR SPL AS1: 192.168.8.220 192.168.8.250",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.16 Record Server",
+    "Login ID":"Administrator",
+    "Password":"manager",
+    "IP":"T1 line Record Server: 192.168.8.10 SP line Record Server: 192.168.8.11",
+    "Remark":"T1 line Record Server: 192.168.8.10 SP line Record Server: 192.168.8.11",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms",
+    "Equipment":"3.17 New NMS Server",
+    "Login ID":"1) admin, for Windows Server login 2) admin, for H3C iMC",
+    "Password":"1) P@ssw0rd, for Windows Server login 2) Pwd@12345, for H3C iMC",
+    "IP":"T1 line New NMS Server: 192.168.8.241 SP line New NMS Server: 192.168.8.242",
+    "Remark":"T1 line New NMS Server: 192.168.8.241 SP line New NMS Server: 192.168.8.242",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - CCR",
+    "Equipment":"T1 COMMS NMS",
+    "Login ID":"admin (windows) admin (SyncUP)",
+    "Password":"APMv6[COMMS! admin",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"SP COMMS NMS",
+    "Login ID":"admin (windows) admin (SyncUP)",
+    "Password":"APMv6[COMMS! admin",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Comms Console",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"RR Comms Console",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"SP Comms Console",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Echo PA Amplifier",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"SP Echo PA Amplifier",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Access Switch #1\/#2",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"SP Access Switch #1\/#2",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - IAC",
+    "Equipment":"T1 Comms Console",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Access Switch #1\/#2",
+    "Login ID":"admin",
+    "Password":"aPMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - CR40",
+    "Equipment":"T1 Core Switch #1\/#2\/#3",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Access Switch #1",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Access Switch #2",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"NMS Server",
+    "Login ID":"admin (windows) admin (H3C iMC)",
+    "Password":"P@ssw0rd Pwd@12345",
+    "IP":"VLAN ID : 10",
+    "Remark":"VLAN ID : 10",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"CXS1",
+    "Login ID":"Not provided by supplier",
+    "Password":"Not provided by supplier",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"CXS2",
+    "Login ID":"Not provided by supplier",
+    "Password":"Not provided by supplier",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - BCR",
+    "Equipment":"T1 COMMS NMS",
+    "Login ID":"admin (windows) admin (SyncUP)",
+    "Password":"APMv6[COMMS! admin",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Comms Console (item missing)",
+    "Login ID":"admin",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Echo PA Amplifier",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"SP Echo PA Amplifier",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"T1 Access Switch",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"SP Access Switch",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - BIAC",
+    "Equipment":"T1 Comms Console",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - 1P050",
+    "Equipment":"T1 Core Switch #1\/#2\/#3",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Tunnnel AP",
+    "Equipment":"T1 Wireless Access Point (AP1-48)",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"RR Wireless Access Point (RR-AP1-11)",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"SPL Wireless Access Point (SP-AP1-14)",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 5",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Train Controller",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"PA Amplifier",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Intercom (#1-8)",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC1*",
+    "Login ID":"admin",
+    "Password":"APMv6COMMS",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC2*",
+    "Login ID":"admin",
+    "Password":"APMv6COMMS",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC3*",
+    "Login ID":"admin",
+    "Password":"APMv6COMMS",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC4",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 6",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC2",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC3",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC4*",
+    "Login ID":"admin",
+    "Password":"APMv6COMMS",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 7",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 8",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 9",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC2",
+    "Login ID":"admin",
+    "Password":"no ping respons!!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 10",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Intercom (#1-4)",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 11",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 12",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 13",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 14",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"",
+    "Equipment":"Onboard Ethernet Switch at MC1",
+    "Login ID":"admin",
+    "Password":"APMv6[COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 15",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 16",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 17",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 18",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 19",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 20",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 21",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 22",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 23",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 24",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Communication System",
+    "Category":"Comms - Vehicle 25",
+    "Equipment":"Wireless Access Point",
+    "Login ID":"root",
+    "Password":"APMv6COMMS!",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Other Systems",
+    "Category":"Incident Timing System",
+    "Equipment":"8.1 Workstation",
+    "Login ID":"admin",
+    "Password":"adm@1326",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Other Systems",
+    "Category":"Incident Timing System",
+    "Equipment":"8.3 Network switch",
+    "Login ID":"admin",
+    "Password":"cisco",
+    "IP":"CSICO 3850D-24T",
+    "Remark":"CSICO 3850D-24T",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Other Systems",
+    "Category":"GBMS",
+    "Equipment":"9.1 GBMS Workstation Windows Login",
+    "Login ID":"C3602",
+    "Password":"12345678",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"T1 Shun Hing",
+    "Equipment":"6a.1 Panasonic PSD PLC",
+    "Login ID":"pewish",
+    "Password":"vipvip",
+    "IP":"PEDC ScreenDoor software for PLC",
+    "Remark":"PEDC ScreenDoor software for PLC",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"T1 Shun Hing",
+    "Equipment":"6a.2 Panasonic PSD workstation",
+    "Login ID":"user",
+    "Password":"(blank)",
+    "IP":"Windows 10 login account",
+    "Remark":"Windows 10 login account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"T1 Shun Hing",
+    "Equipment":"6a.3 SHSI(Shun Hing) PSD MMI",
+    "Login ID":"pewish",
+    "Password":"vipvip",
+    "IP":"PSD MMI Program",
+    "Remark":"PSD MMI Program",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"SPL CNIM",
+    "Equipment":"6b.1 CNIM PSD Server",
+    "Login ID":"cnimhk",
+    "Password":"apm@2013",
+    "IP":"IP: 192.168.50.65",
+    "Remark":"IP: 192.168.50.65",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"SPL CNIM",
+    "Equipment":"6b.2 CNIM PSD Software",
+    "Login ID":"administrator",
+    "Password":"apm@2013",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"SPL CNIM",
+    "Equipment":"6b.3 CNIM PSD DCU Software",
+    "Login ID":"(blank)",
+    "Password":"troll",
+    "IP":"For CNIM PSD DCU Configuration",
+    "Remark":"For CNIM PSD DCU Configuration",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"SPL MHI",
+    "Equipment":"6c.1 MHI PSD Server",
+    "Login ID":"",
+    "Password":"123456",
+    "IP":"IP: 192.168.50.101",
+    "Remark":"IP: 192.168.50.101",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"SPL PSD Integrated",
+    "Equipment":"6 Merged MHI & CNIM workstation windows (by 3602)",
+    "Login ID":"user",
+    "Password":"1qaz@WSX",
+    "IP":"Users Account (IP: 192.168.62.100)",
+    "Remark":"Users Account (IP: 192.168.62.100)",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"PSD System",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"vncuser",
+    "Password":"3edc$RFV5tgb",
+    "IP":"Administrator Account",
+    "Remark":"Administrator Account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"SCADA Software",
+    "Equipment":"7.1 SCADA software",
+    "Login ID":"engineer",
+    "Password":"engineer",
+    "IP":"",
+    "Remark":"User 1",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"7.2 SCADA software",
+    "Login ID":"T1OP",
+    "Password":"T1OP",
+    "IP":"",
+    "Remark":"User 2",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"7.3 SCADA software",
+    "Login ID":"RROP",
+    "Password":"RROP",
+    "IP":"",
+    "Remark":"User 3",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"7.4 SCADA Windows login",
+    "Login ID":"Administrator",
+    "Password":"Apm00000",
+    "IP":"",
+    "Remark":"Server Engineer Level",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"7.5 SCADA Windows login",
+    "Login ID":"SCADA",
+    "Password":"SCADA",
+    "IP":"",
+    "Remark":"Server Operator Level",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"7.6 SCADA Windows login",
+    "Login ID":"Engineer",
+    "Password":"Engineer",
+    "IP":"",
+    "Remark":"Workstation Engineer Level",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"7.7 SCADA Windows login",
+    "Login ID":"SPOP",
+    "Password":"SPOP",
+    "IP":"",
+    "Remark":"Workstation Operator Level",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"7.8 FTP client",
+    "Login ID":"ntpupdate",
+    "Password":"ntpupdate",
+    "IP":"",
+    "Remark":"FTP server: \/FLASH0\/wwwroot\/conf\/NTP FTP client: \/FLASH0\/wwwroot\/conf\/NTP\/customrules",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"CCR",
+    "Equipment":"T1 APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"192.168.3.109",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RR APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"192.168.3.110",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"SP APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"10.22.91.109",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"IAC",
+    "Equipment":"T1 APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"192.168.3.107",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RR APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"192.168.3.108",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"SP APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"10.22.91.107",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"BCR",
+    "Equipment":"T1 APM SCADA Console",
+    "Login ID":"Engineer",
+    "Password":"APMv6[SCADA!",
+    "IP":"192.168.3.101",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RR APM SCADA Console",
+    "Login ID":"Engineer",
+    "Password":"APMv6[SCADA!",
+    "IP":"192.168.3.102",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"SP APM SCADA Console",
+    "Login ID":"Engineer",
+    "Password":"APMv6[SCADA!",
+    "IP":"10.22.91.101",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"BIAC",
+    "Equipment":"T1 APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"192.168.3.105",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RR APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"192.168.3.106",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"SP APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"10.22.91.105",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"CR40",
+    "Equipment":"SCADA Server 1",
+    "Login ID":"Administrator SCADA",
+    "Password":"Apm00000 SCADA",
+    "IP":"192.168.3.201",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"SCADA Server 2",
+    "Login ID":"Administrator SCADA",
+    "Password":"Apm00000 SCADA",
+    "IP":"192.168.3.202",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"1P050",
+    "Equipment":"SCADA Server 1",
+    "Login ID":"Administrator SCADA",
+    "Password":"Apm00000 SCADA",
+    "IP":"10.22.91.201",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"SCADA Server 2",
+    "Login ID":"Administrator SCADA",
+    "Password":"Apm00000 SCADA",
+    "IP":"10.22.91.202",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU & Unknown device",
+    "Equipment":"RTU-A",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.3",
+    "Remark":"Ethernet to RS485 Gateway of RTU-A & B & C",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-B",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.3",
+    "Remark":"Ethernet to RS485 Gateway of RTU-A & B & C",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-C",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.3",
+    "Remark":"Ethernet to RS485 Gateway of RTU-A & B & C",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-D",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.4",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-E",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.5",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-F",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.6",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-G",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.7",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-H",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.8",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-I",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.9 ~ 12",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-J",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.9 ~ 12",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"Unknown",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.13",
+    "Remark":"CR40_AS1 1\/0\/21",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"Unknown",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.14",
+    "Remark":"CR40_AS1 1\/0\/21",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"Unknown",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.15",
+    "Remark":"CR40_AS2 1\/0\/21",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"Unknown",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.16",
+    "Remark":"CR40_AS2 1\/0\/21",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"Unknown",
+    "Login ID":"",
+    "Password":"",
+    "IP":"192.168.3.116",
+    "Remark":"BIAC-T1-LAN 1\/0\/12",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-X",
+    "Login ID":"",
+    "Password":"",
+    "IP":"10.22.91.21",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-Y",
+    "Login ID":"",
+    "Password":"",
+    "IP":"10.22.91.22",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-Z",
+    "Login ID":"",
+    "Password":"",
+    "IP":"10.22.91.23",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-W",
+    "Login ID":"",
+    "Password":"",
+    "IP":"10.22.91.31?????",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"",
+    "Equipment":"RTU-V",
+    "Login ID":"",
+    "Password":"",
+    "IP":"10.22.91.31?????",
+    "Remark":"",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"1",
+    "Equipment":"T1 APM SCADA Console",
+    "Login ID":"APMv6[SCADA!",
+    "Password":"APMv6[SCADA!",
+    "IP":"APMv6[SCADA!",
+    "Remark":"APMv6[SCADA!",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"2",
+    "Equipment":"RR APM SCADA Console",
+    "Login ID":"APMv6[SCADA!",
+    "Password":"APMv6[SCADA!",
+    "IP":"APMv6[SCADA!",
+    "Remark":"APMv6[SCADA!",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"3",
+    "Equipment":"SP APM SCADA Console",
+    "Login ID":"APMv6[SCADA!",
+    "Password":"APMv6[SCADA!",
+    "IP":"APMv6[SCADA!",
+    "Remark":"APMv6[SCADA!",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"IAC",
+    "Equipment":"",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"1",
+    "Equipment":"T1 APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"Engineer SPOP",
+    "Remark":"Engineer SPOP",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"2",
+    "Equipment":"RR APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"Engineer SPOP",
+    "Remark":"Engineer SPOP",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"3",
+    "Equipment":"SP APM SCADA Console",
+    "Login ID":"Engineer SPOP",
+    "Password":"Engineer SPOP",
+    "IP":"Engineer SPOP",
+    "Remark":"Engineer SPOP",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"CR40",
+    "Equipment":"",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"1",
+    "Equipment":"SCADA Server 1",
+    "Login ID":"Apm00000 SCADA",
+    "Password":"Apm00000 SCADA",
+    "IP":"Apm00000 SCADA",
+    "Remark":"Apm00000 SCADA",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"2",
+    "Equipment":"SCADA Server 2",
+    "Login ID":"Apm00000 SCADA",
+    "Password":"Apm00000 SCADA",
+    "IP":"Apm00000 SCADA",
+    "Remark":"Apm00000 SCADA",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"SCADA Software",
+    "Equipment":"",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"Item",
+    "Equipment":"Username",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"User 1",
+    "Equipment":"engineer",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"User 2",
+    "Equipment":"T1OP",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"User 3",
+    "Equipment":"RROP",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU & Unknown device",
+    "Equipment":"",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"Item",
+    "Equipment":"IP address",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-A",
+    "Equipment":"192.168.3.3",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-B",
+    "Equipment":"192.168.3.3",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-C",
+    "Equipment":"192.168.3.3",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-D",
+    "Equipment":"192.168.3.4",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-E",
+    "Equipment":"192.168.3.5",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-F",
+    "Equipment":"192.168.3.6",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-G",
+    "Equipment":"192.168.3.7",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-H",
+    "Equipment":"192.168.3.8",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-I",
+    "Equipment":"192.168.3.9 ~ 12",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-J",
+    "Equipment":"192.168.3.9 ~ 12",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"Unknown",
+    "Equipment":"192.168.3.13",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"Unknown",
+    "Equipment":"192.168.3.14",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"Unknown",
+    "Equipment":"192.168.3.15",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"Unknown",
+    "Equipment":"192.168.3.16",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"Unknown",
+    "Equipment":"192.168.3.116",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-X",
+    "Equipment":"10.22.91.21",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-Y",
+    "Equipment":"10.22.91.22",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-Z",
+    "Equipment":"10.22.91.23",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-W",
+    "Equipment":"10.22.91.31?????",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"SCADA System",
+    "Category":"RTU-V",
+    "Equipment":"10.22.91.31?????",
+    "Login ID":"",
+    "Password":"",
+    "IP":"",
+    "Remark":"",
+    "Sheet":"工作表2"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.1 T1&RRL or SPL ATS Server",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"HKadmin",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: Administrative account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"sysadmin",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: Built-in administrative account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.2 T1&RRL or SPL Database Server",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.3 T1&RRL or SPL MSA Data Array",
+    "Login ID":"monitor",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"manage",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: Administrative account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.4 T1&RRL or SPL Backup Server",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.5 T1&RRL or SPL Diagnostic Server",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.6 T1&RRL or SPL Data Recorder",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.7 T1&RRL or SPL CA Server",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.8 T1&RRL or SPL ATS Workstation",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"4a.8 T1&RRL or SPL ATS Workstation (IAC)",
+    "Login ID":"HKuser",
+    "Password":"HKuser10!",
+    "IP":"Pending completion of 3602",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"HKadmin",
+    "Password":"HKadmin10!",
+    "IP":"Pending completion of 3602",
+    "Remark":"OS: Administrative account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"sysadmin",
+    "Password":"HKadmin10!",
+    "IP":"Pending completion of 3602",
+    "Remark":"OS: Built-in administrative account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"4a.8 ATS Software",
+    "Login ID":"Admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"ATS: Admidmistrative account for ATS Workstation",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"ABD-T1L-OC",
+    "Password":"ABD-T1L-OC!",
+    "IP":"",
+    "Remark":"ATS: APMOC T1L account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"ABD-SPL-OC",
+    "Password":"ABD-SPL-OC!",
+    "IP":"",
+    "Remark":"ATS: APMOC SPL account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"ABD-AM",
+    "Password":"ABD-AM!",
+    "IP":"",
+    "Remark":"ATS: APMAM account (T1 & SP)",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"T1L-MC-TH",
+    "Password":"T1L-MC-TH?!",
+    "IP":"",
+    "Remark":"ATS: APMMC T1L TH account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"SPL-MC-TH",
+    "Password":"SPL-MC-TH?!",
+    "IP":"",
+    "Remark":"ATS: APMMC SPL TH account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"T1L-MC",
+    "Password":"T1L-MC?!",
+    "IP":"",
+    "Remark":"ATS: APMMC T1L NTH account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"",
+    "Login ID":"SPL-MC",
+    "Password":"SPL-MC?!",
+    "IP":"",
+    "Remark":"ATS: APMMC SPL NTH account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.9 T1&RRL or SPL Diagnostic Workstation",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.10 T1&RRL or SPL MIMIC Workstation",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"4a.10 T1&RRL or SPL MIMIC Workstation (IAC)",
+    "Login ID":"HKuser",
+    "Password":"HKuser10!",
+    "IP":"Pending completion of 3602",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"4a.10 ATS Software",
+    "Login ID":"Admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"ATS: Admidmistrative account for ATS Workstation",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.11 T1&RRL or SPL LATS Workstation",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"4a.11 T1&RRL or SPL LATS Workstation (IAC)",
+    "Login ID":"HKuser",
+    "Password":"HKuser10!",
+    "IP":"Pending completion of 3602",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"",
+    "Equipment":"4a.11 ATS Software",
+    "Login ID":"Admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"ATS: Admidmistrative account for ATS Workstation",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.12 T1&RRL or SPL Trusted NMS Workstation",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Computer",
+    "Equipment":"4a.13 T1&RRL or SPL ZC Diagnostic Collector",
+    "Login ID":"HKuser",
+    "Password":"APMv6[ml",
+    "IP":"",
+    "Remark":"OS: User account",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.1 LAN switch 1 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40LANSW1 Management IP:172.21.1.249\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.2 LAN switch 2 in CR40 server room",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"Confirmed by 3602 SAT",
+    "Remark":"Name: CR40LANSW2 Management IP:172.21.1.250\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.3 Firewall 1 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name:CR40_FW1 Cluster Name: CR40_FW, Password: CR40_FW Managent IP: 172.21.1.200\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.4 Firewall 2 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name:CR40_FW1 Cluster Name: CR40_FW, Password: CR40_FW Managent IP: 172.21.1.200\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.5 External Interface Switch 01 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40BRD1 Management IP: 172.22.82.3\/27",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.6 External Interface Switch 02 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40BRD2 Management IP: 172.22.82.4\/27",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.7 Router 1 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"private",
+    "IP":"",
+    "Remark":"Name: CR40_RTR1 Management IP: 172.22.74.1\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.8 Router 2 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"private",
+    "IP":"",
+    "Remark":"Name: CR40_RTR2 Management IP: 172.22.74.2\/25",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.9 Router 3 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_RTR3 Management IP: 172.22.74.3\/26",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.10 Router 4 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_RTR4 Management IP: 172.22.74.4\/27",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.11 Class 1 BB Switch 1 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_BB1_SW1 Management IP: 172.22.72.241\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.12 Class 2 BB Switch 1 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_BB2_SW1 Management IP: 172.21.253\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.13 Class 2 BB Switch 2 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_BB2_SW2 Management IP: 172.21.254\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.14 SD11 in CR40 server room",
+    "Login ID":"root",
+    "Password":"p",
+    "IP":"",
+    "Remark":"Physical IP address: 172.22.76.2",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.15 SD12 in CR40 server room",
+    "Login ID":"root",
+    "Password":"p",
+    "IP":"",
+    "Remark":"Physical IP address: 172.22.76.3",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.16 SD Loader in CR40 server room",
+    "Login ID":"root",
+    "Password":"p",
+    "IP":"",
+    "Remark":"Physical IP address: 172.22.1.210",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.17 Untrusted BB Switch 1 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_UBB_SW1 Management IP: 172.22.176.1\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.18 Untrusted BB Switch 2 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_UBB_SW2 Management IP: 172.22.176.2\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.19 Inter-ring Switch 1 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_IR_SW1 Management IP: 172.22.184.1\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CR40 server room)",
+    "Equipment":"4b.20 Inter-ring Switch 2 in CR40 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CR40_IR_SW2 Management IP: 172.22.184.3\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (EH Computer room)",
+    "Equipment":"4ba.1 LAN switch 1 in EH Computer room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: APMLANSW1 Management IP: 172.21.1.241\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (EH Computer room)",
+    "Equipment":"4ba.2 LAN switch 2 in EH Computer room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: APMLANSW2 Management IP: 172.21.1.242\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.1 LAN switch 1 in 1MC074 room",
+    "Login ID":"HKadmin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MCLANSW1 Management IP: 172.21.251\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.2 LAN switch 2 in 1MC074 room",
+    "Login ID":"HKadmin",
+    "Password":"HKadmin10!",
+    "IP":"admin",
+    "Remark":"Name: MCLANSW2 Management IP: 172.21.252\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.3 Router 1 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"private",
+    "IP":"admin",
+    "Remark":"Name: MC_RTR1 Management IP: 172.22.74.5\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.4 Router 2 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"private",
+    "IP":"",
+    "Remark":"Name: MC_RTR2 Management IP: 172.22.74.6\/25",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.5 Router 3 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_RTR3 Management IP: 172.22.74.7\/26",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.6 Router 4 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_RTR4 Management IP: 172.22.74.8\/27",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.7 Class 1 BB switch 1 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_BB1_SW1 Management IP: 172.22.72.242\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.8 Class 2 BB switch 1 in 1MC074 room",
+    "Login ID":"HKadmin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_BB2_SW1 Management IP: 172.21.5.253\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.9 Class 2 BB switch 2 in 1MC074 room",
+    "Login ID":"HKadmin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_BB2_SW2 Management IP: 172.21.5.254\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.10 SD21 in 1MC074 room",
+    "Login ID":"root",
+    "Password":"p",
+    "IP":"",
+    "Remark":"Physical IP address: 172.22.76.42",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.11 SD22 in 1MC074 room",
+    "Login ID":"root",
+    "Password":"p",
+    "IP":"",
+    "Remark":"Physical IP address: 172.22.76.43",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.12 Untrusted BB Switch 1 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_UBB_SW1 Management IP: 172.22.176.3\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.13 Untrusted BB Switch 2 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_UBB_SW2 Management IP: 172.22.176.4\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.14 Inter-ring Switch 1 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_IR_SW1 Management IP: 172.22.184.4\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.15 Inter-ring Switch 2 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_IR_SW2 Management IP: 172.22.184.5\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.16 Inter-ring Switch 3 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_IR_SW3 Management IP: 172.22.184.6\/18",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1MC074 room)",
+    "Equipment":"4c.17 Inter-ring Switch 4 in 1MC074 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: MC_IR_SW4 Management IP: 172.22.184.7\/19",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.1 LAN switch 1 in 1P050 room",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_LANSW1 Management IP: 172.21.9.249\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.2 LAN switch 2 in 1P050 room",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_LANSW2 Management IP: 172.21.9.250\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.3 Firewall 1 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"Not in used",
+    "Remark":"Name: 1P_FW1 Management IP: 172.21.9.203\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.4 Firewall 2 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"Not in used",
+    "Remark":"Name: 1P_FW2 Management IP: 172.21.9.204\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.5 External Interface Switch 01 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_EXT_SW1 Management IP: 172.22.82.3\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.6 External Interface Switch 02 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_EXT_SW2 Management IP: 172.22.82.4\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.7 Router 1 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_RTR_01 Management IP: 172.22.74.9\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.8 Router 2 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_RTR_02 Management IP: 172.22.74.10\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.9 Router 3 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_RTR_03 Management IP: 172.22.74.3\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.10 Router 4 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_RTR_04 Management IP: 172.22.74.4\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.11 Class 1 BB switch 1 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_BB1_SW1 Management IP: 172.22.74.243\/24",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.12 Class 2 BB switch 1 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_BB2_SW1 Management IP: 172.21.9.253\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.13 Class 2 BB switch 2 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_BB2_SW2 Management IP: 172.21.9.254\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.14 Untrusted BB switch 1 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_UBB_SW1 Management IP: 172.22.176.5\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.15 Untrusted BB switch 2 in 1P050 room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_UBB_SW2 Management IP: 172.22.176.6\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.16 SD Loader in 1P050 server room",
+    "Login ID":"root",
+    "Password":"p",
+    "IP":"",
+    "Remark":"Physical IP address: 172.22.1.220",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.17 Inter-ring Switch 1 in 1P050 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_IR_SW1 Management IP: 172.22.184.8\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (1P050 server room)",
+    "Equipment":"4d.18 Inter-ring Switch 2 in 1P050 server room",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: 1P_IR_SW2 Management IP: 172.22.184.9\/17",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (TDMO)",
+    "Equipment":"4e.1 LAN switch 1 in TDMO",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: TDMOLANSW1 Management IP: 172.21.2.253\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (TDMO)",
+    "Equipment":"4e.2 LAN switch 2 in TDMO",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: TDMOLANSW2 Management IP: 172.21.2.254\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (TDMO)",
+    "Equipment":"4e.3 LAN switch 3 in TDMO",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: TDMOLANSW3 Management IP: 172.21.10.243\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (TDMO)",
+    "Equipment":"4e.4 LAN switch 4 in TDMO",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: TDMOLANSW4 Management IP: 172.21.10.244\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (BIAC)",
+    "Equipment":"4f.1 LAN switch 1 in BIAC",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: BIACLANSW1 Management IP: 172.21.3.243\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (BIAC)",
+    "Equipment":"4f.2 LAN switch 2 in BIAC",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: BIACLANSW2 Management IP: 172.21.3.244\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (BIAC)",
+    "Equipment":"4f.3 LAN switch 3 in BIAC",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: BIACLANSW3 Management IP: 172.21.11.243\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (BIAC)",
+    "Equipment":"4f.4 LAN switch 4 in BIAC",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: BIACLANSW4 Management IP: 172.21.11.244\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (BCR)",
+    "Equipment":"4g.1 LAN switch 3 in BCR",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: BCCRLANSW3 Management IP: 172.21.9.243\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (BCR)",
+    "Equipment":"4g.2 LAN switch 4 in BCR",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: BCCRLANSW4 Management IP: 172.21.9.244\/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (New IAC)",
+    "Equipment":"4h.1 LAN switch 1 in New IAC Room",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: NIACLANSW1 Management IP: 172.21.3.241 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (New IAC)",
+    "Equipment":"4h.2 LAN switch 2 in New IAC Room",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: NIACLANSW2 Management IP: 172.21.3.242 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (New IAC)",
+    "Equipment":"4h.3 LAN switch 3 in New IAC Room",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"Not in used",
+    "Remark":"Name: NIACLANSW3 Management IP: 172.21.11.241 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (New IAC)",
+    "Equipment":"4h.4 LAN switch 4 in New IAC Room",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"Not in used",
+    "Remark":"Name: NIACLANSW4 Management IP: 172.21.11.242 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CCR)",
+    "Equipment":"4i.1 LAN switch 1 in CCR",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CCLANSW1 Management IP: 172.21.1.239 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CCR)",
+    "Equipment":"4i.2 LAN switch 2 in CCR",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CCLANSW2 Management IP: 172.21.11.240 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CCR)",
+    "Equipment":"4i.3 LAN switch 3 in CCR",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CCLANSW3 Management IP: 172.21.9.241 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (CCR)",
+    "Equipment":"4i.4 LAN switch 4 in CCR",
+    "Login ID":"manager",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: CCLANSW4 Management IP: 172.21.9.242 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (AIS)",
+    "Equipment":"4j.1 LAN switch 1 in New AIS Room",
+    "Login ID":"HKadmin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: AISLANSW1 Management IP: 172.21.13.249 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Network Device (AIS)",
+    "Equipment":"4j.2 LAN switch 2 in New AIS Room",
+    "Login ID":"HKadmin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Name: AISLANSW2 Management IP: 172.21.13.250 \/16",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Devices",
+    "Equipment":"4k.1 OBRU\/MRU Radio untrusted\/Radio trusted",
+    "Login ID":"root",
+    "Password":"thalesSDR",
+    "IP":"",
+    "Remark":"Please refer to the onboard OBRU\/MRU IP address list",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Devices",
+    "Equipment":"4k.2 WRU Network switch",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"Please refer to the WRU IP address list",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Devices",
+    "Equipment":"4k.3 WRU Radio untrusted switch",
+    "Login ID":"root",
+    "Password":"thalesSDR",
+    "IP":"",
+    "Remark":"Please refer to the WRU IP address list",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Onboard",
+    "Equipment":"5.1 FLMD - Windows",
+    "Login ID":"FLMDadmin",
+    "Password":"FLMDadmin",
+    "IP":"",
+    "Remark":"FLMD - Front Line Maintenance Device",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Onboard",
+    "Equipment":"5.2 FLMD - Ubuntu",
+    "Login ID":"ubuser",
+    "Password":"ubuser",
+    "IP":"",
+    "Remark":"VirtualBox Ubuntu OS",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Onboard",
+    "Equipment":"5.3 FLMD - Ubuntu",
+    "Login ID":"root",
+    "Password":"root",
+    "IP":"",
+    "Remark":"VOBC SYSlog download",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Onboard",
+    "Equipment":"5.4 FLMD - Red Hat",
+    "Login ID":"rhuser",
+    "Password":"rhuser",
+    "IP":"",
+    "Remark":"VirtualBox Red Hat OS",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - Onboard",
+    "Equipment":"5.5 FLMD - Red Hat",
+    "Login ID":"root",
+    "Password":"p",
+    "IP":"",
+    "Remark":"ZC SYSlog download (can be downloaded via WinSCP)",
+    "Sheet":"工作表1"
+  },
+  {
+    "System":"Signalling System(CBTC)",
+    "Category":"CBTC - CyberSecurity",
+    "Equipment":"6.1 SEP Manager",
+    "Login ID":"admin",
+    "Password":"HKadmin10!",
+    "IP":"",
+    "Remark":"T1: Backup Server (SEPM 14.3) NMS Workstation (SEMP 12.2) SP: NMS Workstation (SEMP 12.2)",
+    "Sheet":"工作表1"
+  }
+]
