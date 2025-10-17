@@ -1,128 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>APM Systems Password Search</title>
-  <style>
-    :root {
-      --bg: #0b0f14;
-      --panel: #121821;
-      --panel-2: #0e141b;
-      --text: #e8f0f8;
-      --muted: #96a3b3;
-      --accent: #2ea043;
-      --accent-2: #2563eb;
-      --chip: #1f2937;
-      --border: #1d2633;
-      --card: #111827;
-      --danger: #ef4444;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; padding: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: linear-gradient(160deg, var(--bg), #091018 60%);
-      color: var(--text);
-    }
-    header {
-      position: sticky; top: 0; z-index: 10;
-      backdrop-filter: blur(8px);
-      background: rgba(9,16,24,0.7);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 16px;
-    }
-    .container { max-width: 1100px; margin: 0 auto; padding: 16px; }
-    h1 { font-size: 22px; margin: 4px 0 2px; letter-spacing: .2px; }
-    .sub { color: var(--muted); font-size: 12px; }
-    .filters {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-      margin-top: 12px;
-    }
-    @media (min-width: 700px) {
-      .filters { grid-template-columns: repeat(3, 1fr); }
-    }
-    label { font-size: 12px; color: var(--muted); margin-bottom: 6px; display:block; }
-    select {
-      width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border);
-      background: var(--panel); color: var(--text); outline: none;
-    }
-    .result-head {
-      display: flex; align-items: center; justify-content: space-between;
-      margin: 16px 0 8px;
-    }
-    .count { font-size: 12px; color: var(--muted); }
-    .clear-btn {
-      border: 1px solid var(--border); border-radius: 10px; background: var(--panel);
-      padding: 8px 12px; color: var(--muted); cursor: pointer;
-    }
-    .clear-btn:hover { color: var(--text); border-color: #243041; }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    @media (min-width: 700px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 1024px) {
-      .grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    .card {
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--card), var(--panel-2));
-      border-radius: 14px;
-      padding: 12px;
-      display:flex; flex-direction: column; gap: 8px;
-      min-height: 140px;
-      word-break: break-word;
-    }
-    .row { display: grid; grid-template-columns: 120px 1fr; gap: 8px; }
-    .key { color: var(--muted); font-size: 12px; }
-    .val { font-size: 14px; }
-    .chips { display:flex; gap:6px; flex-wrap:wrap; }
-    .chip { background: var(--chip); color: #c7d2fe; font-size: 11px; padding: 4px 8px; border-radius: 999px; }
-    footer { color: var(--muted); font-size: 12px; text-align: center; padding: 24px 0 48px; }
-    .empty { color: var(--muted); padding: 16px 0; }
-  </style>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APM Systems Search (Detailed + Merged Cells Fixed)</title>
+<link rel="preconnect" href="">
+<style>
+  :root{--bg:#0b0f14;--panel:#121821;--panel-2:#0e141b;--text:#e8f0f8;--muted:#96a3b3;--border:#1d2633;--card:#111827}
+  *{box-sizing:border-box}body{margin:0;background:linear-gradient(160deg,var(--bg),#091018 60%);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto}
+  header{position:sticky;top:0;z-index:10;background:rgba(9,16,24,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 16px}
+  .container{max-width:1200px;margin:0 auto;padding:14px 16px}h1{font-size:22px;margin:4px 0 2px}.sub{color:var(--muted);font-size:12px}
+  .filters{display:grid;gap:8px;margin-top:10px;grid-template-columns:1fr}@media(min-width:760px){.filters{grid-template-columns:repeat(3,1fr)}}
+  label{font-size:12px;color:var(--muted);margin-bottom:6px;display:block}
+  select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--panel);color:var(--text);outline:none}
+  .result-head{display:flex;align-items:center;justify-content:space-between;margin:14px 0 8px}.count{font-size:12px;color:var(--muted)}
+  .clear-btn{border:1px solid var(--border);border-radius:10px;background:var(--panel);padding:8px 12px;color:var(--muted);cursor:pointer}
+  .grid{display:grid;gap:12px;grid-template-columns:1fr}@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+  .card{border:1px solid var(--border);background:linear-gradient(180deg,var(--card),var(--panel-2));border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px;min-height:140px;word-break:break-word}
+  .row{display:grid;grid-template-columns:120px 1fr;gap:8px}.key{color:var(--muted);font-size:12px}.val{font-size:14px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}.chip{background:#1f2937;color:#c7d2fe;font-size:11px;padding:4px 8px;border-radius:999px}
+  details{border-top:1px dashed var(--border);padding-top:6px;margin-top:2px}details summary{cursor:pointer;font-size:12px;color:var(--muted)}
+  .kv{display:grid;grid-template-columns:120px 1fr;gap:8px;margin-top:6px}.empty{color:#96a3b3;padding:16px 0}
+</style></head>
 <body>
-  <header>
-    <div class="container">
-      <h1>APM Systems Password Search</h1>
-      <div class="sub">Select <strong>System</strong> → <strong>Category</strong> → <strong>Equipment</strong> to view results in card format.</div>
-      <div class="filters">
-        <div>
-          <label>System</label>
-          <select id="system"></select>
-        </div>
-        <div>
-          <label>Category</label>
-          <select id="category"></select>
-        </div>
-        <div>
-          <label>Equipment</label>
-          <select id="equipment"></select>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="result-head">
-      <div class="count" id="count">0 result</div>
-      <button class="clear-btn" id="reset">Reset</button>
-    </div>
-    <div id="grid" class="grid"></div>
-    <div id="empty" class="empty" style="display:none;">No results.</div>
-  </main>
-
-  <footer>
-    Offline-ready. Data: <code>data/data.json</code> • No external libraries.
-  </footer>
-
-  <script src="app.js"></script>
-</body>
-</html>
+<header><div class="container">
+  <h1>APM Systems Search (Detailed + Merged Cells Fixed)</h1>
+  <div class="sub">Merged cells are expanded via forward-fill. Use System → Category → Equipment.</div>
+  <div class="filters">
+    <div><label>System</label><select id="system"></select></div>
+    <div><label>Category</label><select id="category"></select></div>
+    <div><label>Equipment</label><select id="equipment"></select></div>
+  </div>
+</div></header>
+<main class="container">
+  <div class="result-head"><div class="count" id="count">0 result</div><button class="clear-btn" id="reset">Reset</button></div>
+  <div id="grid" class="grid"></div><div id="empty" class="empty" style="display:none;">No results.</div>
+</main>
+<footer class="container" style="color:#96a3b3;font-size:12px;padding-bottom:48px">Offline. Data: <code>data/data.json</code> • Merged cells handled.</footer>
+<script>
+(function(){
+  const els={system:document.getElementById('system'),category:document.getElementById('category'),equipment:document.getElementById('equipment'),
+             grid:document.getElementById('grid'),count:document.getElementById('count'),empty:document.getElementById('empty'),reset:document.getElementById('reset')};
+  let DATA=[],filters={system:'',category:'',equipment:''};
+  const PRIMARY=['Category','Equipment','Login ID','Password','IP','Remark']; const HIDE=new Set(['System','__SourceFile','__SourceSheet']);
+  const uniq=a=>[...new Set(a.filter(Boolean))].sort(); const opt=(t,v)=>{const o=document.createElement('option');o.textContent=t;o.value=v;return o};
+  const clear=n=>{while(n.firstChild)n.removeChild(n.firstChild)};
+  function populateSystems(){const s=uniq(DATA.map(x=>x['System']));clear(els.system);els.system.append(opt('— All Systems —',''));s.forEach(v=>els.system.append(opt(v,v)))}
+  function populateCategories(){const sub=filters.system?DATA.filter(x=>x['System']===filters.system):DATA;const s=uniq(sub.map(x=>x['Category']));clear(els.category);els.category.append(opt('— All Categories —',''));s.forEach(v=>els.category.append(opt(v,v)))}
+  function populateEquipment(){let sub=DATA;if(filters.system) sub=sub.filter(x=>x['System']===filters.system);if(filters.category) sub=sub.filter(x=>x['Category']===filters.category);
+    const s=uniq(sub.map(x=>x['Equipment']));clear(els.equipment);els.equipment.append(opt('— All Equipment —',''));s.forEach(v=>els.equipment.append(opt(v,v)))}
+  function rowKV(k,v){const R=document.createElement('div');R.className='row';const K=document.createElement('div');K.className='key';K.textContent=k;const V=document.createElement('div');V.className='val';V.textContent=v||'';R.append(K,V);return R}
+  function render(){let sub=DATA;if(filters.system) sub=sub.filter(x=>x['System']===filters.system);if(filters.category) sub=sub.filter(x=>x['Category']===filters.category);if(filters.equipment) sub=sub.filter(x=>x['Equipment']===filters.equipment);
+    clear(els.grid);const n=sub.length;els.count.textContent=n+(n===1?' result':' results');els.empty.style.display=n?'none':'block';
+    sub.forEach(row=>{const card=document.createElement('div');card.className='card';card.append(rowKV('Category',row['Category']||''));card.append(rowKV('Equipment',row['Equipment']||''));
+      if(row['Login ID']) card.append(rowKV('Login ID',row['Login ID'])); if(row['Password']) card.append(rowKV('Password',row['Password'])); if(row['IP']) card.append(rowKV('IP',String(row['IP']))); if(row['Remark']) card.append(rowKV('Remark',row['Remark']));
+      const chips=document.createElement('div');chips.className='chips';const s=document.createElement('span');s.className='chip';s.textContent=row['System']||'—';chips.append(s); if(row['Location']){const c=document.createElement('span');c.className='chip';c.textContent=row['Location'];chips.append(c)}; if(row['Rack']){const c=document.createElement('span');c.className='chip';c.textContent='Rack: '+row['Rack'];chips.append(c)}; card.append(chips);
+      const extras=Object.keys(row).filter(k=>!HIDE.has(k)&&!PRIMARY.includes(k)&&k!=='Category'&&k!=='Equipment').filter(k=>row[k]&&String(row[k]).trim().length>0);
+      if(extras.length){const det=document.createElement('details');const sum=document.createElement('summary');sum.textContent='More details';det.append(sum);
+        extras.forEach(k=>{const kv=document.createElement('div');kv.className='kv';const K=document.createElement('div');K.className='key';K.textContent=k;const V=document.createElement('div');V.className='val';V.textContent=String(row[k]);kv.append(K,V);det.append(kv)}); card.append(det);}
+      els.grid.append(card);});}
+  function onChange(){filters.system=els.system.value;filters.category=els.category.value;filters.equipment=els.equipment.value;populateCategories();populateEquipment();
+    if(![...els.category.options].some(o=>o.value===filters.category)){els.category.value='';filters.category='';}else{els.category.value=filters.category}
+    if(![...els.equipment.options].some(o=>o.value===filters.equipment)){els.equipment.value='';filters.equipment='';}else{els.equipment.value=filters.equipment} render();}
+  function reset(){filters={system:'',category:'',equipment:''};els.system.value='';els.category.value='';els.equipment.value='';populateCategories();populateEquipment();render();}
+  fetch('data/data.json').then(r=>r.json()).then(d=>{DATA=d;populateSystems();populateCategories();populateEquipment();render();});
+  els.system.addEventListener('change',onChange);els.category.addEventListener('change',onChange);els.equipment.addEventListener('change',onChange);els.reset.addEventListener('click',reset);
+})();</script>
+</body></html>
