@@ -762,7 +762,7 @@
   {
     "System":"Communication System",
     "Category":"Comms - Vehicle 5",
-    "Equipment":"(#1-8)",
+    "Equipment":"INTERCOM (#1-4)",
     "Login ID":"admin",
     "Password":"APMv6[COMMS!",
     "IP":"192.168.105.21-28",
@@ -842,7 +842,7 @@
   {
     "System":"Communication System",
     "Category":"Comms - Vehicle 6",
-    "Equipment":"(#1-8)",
+    "Equipment":"INTERCOM (#1-4)",
     "Login ID":"admin",
     "Password":"APMv6[COMMS!",
     "IP":"192.168.106.21-28",
@@ -922,7 +922,7 @@
   {
     "System":"Communication System",
     "Category":"Comms - Vehicle 7",
-    "Equipment":"(#1-8)",
+    "Equipment":"INTERCOM (#1-4)",
     "Login ID":"admin",
     "Password":"APMv6[COMMS!",
     "IP":"192.168.107.21-28",
@@ -1002,7 +1002,7 @@
   {
     "System":"Communication System",
     "Category":"Comms - Vehicle 8",
-    "Equipment":"(#1-8)",
+    "Equipment":"INTERCOM (#1-4)",
     "Login ID":"admin",
     "Password":"APMv6[COMMS!",
     "IP":"192.168.108.21-28",
@@ -1082,7 +1082,7 @@
   {
     "System":"Communication System",
     "Category":"Comms - Vehicle 9",
-    "Equipment":"(#1-8)",
+    "Equipment":"INTERCOM (#1-4)",
     "Login ID":"admin",
     "Password":"APMv6[COMMS!",
     "IP":"192.168.109.21-28",
@@ -1762,7 +1762,7 @@
   {
     "System":"Communication System",
     "Category":"Comms - Vehicle 20",
-    "Equipment":"(#1-8)",
+    "Equipment":"INTERCOM (#1-4)",
     "Login ID":"admin",
     "Password":"APMv6[COMMS!",
     "IP":"192.168.120.21-28",
@@ -1962,7 +1962,7 @@
   {
     "System":"Communication System",
     "Category":"Comms - Vehicle 23",
-    "Equipment":"(#1-8)",
+    "Equipment":"INTERCOM (#1-4)",
     "Login ID":"admin",
     "Password":"APMv6[COMMS!",
     "IP":"192.168.123.21-28",
@@ -2712,51 +2712,11 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL ATS Server",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL ATS Server",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"T1&RRL or SPL Database Server",
     "Login ID":"HKuser",
     "Password":"APMv6[ml",
     "IP":"4a.2 T1&RRL or SPL Database Server",
     "Remark":"OS: User account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Database Server",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Database Server",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
     "Sheet":"工作表1"
   },
   {
@@ -2772,41 +2732,11 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL MSA Data Array",
-    "Login ID":"manage",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"T1&RRL or SPL Backup Server",
     "Login ID":"HKuser",
     "Password":"APMv6[ml",
     "IP":"4a.4 T1&RRL or SPL Backup Server",
     "Remark":"OS: User account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Backup Server",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Backup Server",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
     "Sheet":"工作表1"
   },
   {
@@ -2822,51 +2752,11 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Diagnostic Server",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Diagnostic Server",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"T1&RRL or SPL Data Recorder",
     "Login ID":"HKuser",
     "Password":"APMv6[ml",
     "IP":"4a.6 T1&RRL or SPL Data Recorder",
     "Remark":"OS: User account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Data Recorder",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Data Recorder",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
     "Sheet":"工作表1"
   },
   {
@@ -2882,51 +2772,11 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL CA Server",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL CA Server",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"T1&RRL or SPL ATS Workstation",
     "Login ID":"HKuser",
     "Password":"APMv6[ml",
     "IP":"4a.8 T1&RRL or SPL ATS Workstation",
     "Remark":"OS: User account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL ATS Workstation",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL ATS Workstation",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
     "Sheet":"工作表1"
   },
   {
@@ -2942,101 +2792,11 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL ATS Workstation (IAC)",
-    "Login ID":"HKadmin",
-    "Password":"HKadmin10!",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL ATS Workstation (IAC)",
-    "Login ID":"sysadmin",
-    "Password":"HKadmin10!",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"ATS Software",
     "Login ID":"Admin",
     "Password":"HKadmin10!",
     "IP":"4a.8 ATS Software",
     "Remark":"ATS: Admidmistrative account for ATS Workstation",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"ATS Software",
-    "Login ID":"ABD-T1L-OC",
-    "Password":"ABD-T1L-OC!",
-    "IP":"",
-    "Remark":"ATS: APMOC T1L account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"ATS Software",
-    "Login ID":"ABD-SPL-OC",
-    "Password":"ABD-SPL-OC!",
-    "IP":"",
-    "Remark":"ATS: APMOC SPL account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"ATS Software",
-    "Login ID":"ABD-AM",
-    "Password":"ABD-AM!",
-    "IP":"",
-    "Remark":"ATS: APMAM account (T1 & SP)",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"ATS Software",
-    "Login ID":"T1L-MC-TH",
-    "Password":"T1L-MC-TH?!",
-    "IP":"",
-    "Remark":"ATS: APMMC T1L TH account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"ATS Software",
-    "Login ID":"SPL-MC-TH",
-    "Password":"SPL-MC-TH?!",
-    "IP":"",
-    "Remark":"ATS: APMMC SPL TH account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"ATS Software",
-    "Login ID":"T1L-MC",
-    "Password":"T1L-MC?!",
-    "IP":"",
-    "Remark":"ATS: APMMC T1L NTH account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"ATS Software",
-    "Login ID":"SPL-MC",
-    "Password":"SPL-MC?!",
-    "IP":"",
-    "Remark":"ATS: APMMC SPL NTH account",
     "Sheet":"工作表1"
   },
   {
@@ -3052,26 +2812,6 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Diagnostic Workstation",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Diagnostic Workstation",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"T1&RRL or SPL MIMIC Workstation",
     "Login ID":"HKuser",
     "Password":"APMv6[ml",
@@ -3082,51 +2822,11 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL MIMIC Workstation",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL MIMIC Workstation",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"T1&RRL or SPL MIMIC Workstation (IAC)",
     "Login ID":"HKuser",
     "Password":"HKuser10!",
     "IP":"4a.10 T1&RRL or SPL MIMIC Workstation (IAC)",
     "Remark":"OS: User account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL MIMIC Workstation (IAC)",
-    "Login ID":"HKadmin",
-    "Password":"HKadmin10!",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL MIMIC Workstation (IAC)",
-    "Login ID":"sysadmin",
-    "Password":"HKadmin10!",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
     "Sheet":"工作表1"
   },
   {
@@ -3152,51 +2852,11 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL LATS Workstation",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL LATS Workstation",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"T1&RRL or SPL LATS Workstation (IAC)",
     "Login ID":"HKuser",
     "Password":"HKuser10!",
     "IP":"4a.11 T1&RRL or SPL LATS Workstation (IAC)",
     "Remark":"OS: User account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL LATS Workstation (IAC)",
-    "Login ID":"HKadmin",
-    "Password":"HKadmin10!",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL LATS Workstation (IAC)",
-    "Login ID":"sysadmin",
-    "Password":"HKadmin10!",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
     "Sheet":"工作表1"
   },
   {
@@ -3222,51 +2882,11 @@
   {
     "System":"Signalling System(CBTC)",
     "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Trusted NMS Workstation",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL Trusted NMS Workstation",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
     "Equipment":"T1&RRL or SPL ZC Diagnostic Collector",
     "Login ID":"HKuser",
     "Password":"APMv6[ml",
     "IP":"4a.13 T1&RRL or SPL ZC Diagnostic Collector",
     "Remark":"OS: User account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL ZC Diagnostic Collector",
-    "Login ID":"HKadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Administrative account",
-    "Sheet":"工作表1"
-  },
-  {
-    "System":"Signalling System(CBTC)",
-    "Category":"CBTC - Computer",
-    "Equipment":"T1&RRL or SPL ZC Diagnostic Collector",
-    "Login ID":"sysadmin",
-    "Password":"APMv6[ml",
-    "IP":"",
-    "Remark":"OS: Built-in administrative account",
     "Sheet":"工作表1"
   },
   {

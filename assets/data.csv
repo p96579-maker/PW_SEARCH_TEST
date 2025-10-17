@@ -75,7 +75,7 @@ Communication System,Comms - Tunnnel AP,Wireless Access Point (SP-AP1-14),root,A
 Communication System,Comms - Vehicle 5,Access Point,root,APMv6COMMS!,192.168.105.1,,工作表1
 Communication System,Comms - Vehicle 5,Controller,admin,APMv6[COMMS!,192.168.105.2,,工作表1
 Communication System,Comms - Vehicle 5,Amplifier,admin,APMv6[COMMS!,192.168.105.3,,工作表1
-Communication System,Comms - Vehicle 5,(#1-8),admin,APMv6[COMMS!,192.168.105.21-28,,工作表1
+Communication System,Comms - Vehicle 5,INTERCOM (#1-4),admin,APMv6[COMMS!,192.168.105.21-28,,工作表1
 Communication System,Comms - Vehicle 5,Ethernet Switch at MC1*,admin,APMv6COMMS,192.168.105.41,,工作表1
 Communication System,Comms - Vehicle 5,Ethernet Switch at MC2*,admin,APMv6COMMS,192.168.105.42,,工作表1
 Communication System,Comms - Vehicle 5,Ethernet Switch at MC3*,admin,APMv6COMMS,192.168.105.43,,工作表1
@@ -83,7 +83,7 @@ Communication System,Comms - Vehicle 5,Ethernet Switch at MC4,admin,APMv6[COMMS!
 Communication System,Comms - Vehicle 6,Access Point,root,APMv6COMMS!,192.168.106.1,,工作表1
 Communication System,Comms - Vehicle 6,Controller,admin,APMv6[COMMS!,192.168.106.2,,工作表1
 Communication System,Comms - Vehicle 6,Amplifier,admin,APMv6[COMMS!,192.168.106.3,,工作表1
-Communication System,Comms - Vehicle 6,(#1-8),admin,APMv6[COMMS!,192.168.106.21-28,,工作表1
+Communication System,Comms - Vehicle 6,INTERCOM (#1-4),admin,APMv6[COMMS!,192.168.106.21-28,,工作表1
 Communication System,Comms - Vehicle 6,Ethernet Switch at MC1*,admin,APMv6COMMS,192.168.106.41,,工作表1
 Communication System,Comms - Vehicle 6,Ethernet Switch at MC2,admin,APMv6[COMMS!,192.168.106.42,,工作表1
 Communication System,Comms - Vehicle 6,Ethernet Switch at MC3,admin,APMv6[COMMS!,192.168.106.43,,工作表1
@@ -91,7 +91,7 @@ Communication System,Comms - Vehicle 6,Ethernet Switch at MC4*,admin,APMv6COMMS,
 Communication System,Comms - Vehicle 7,Access Point,root,APMv6COMMS!,192.168.107.1,,工作表1
 Communication System,Comms - Vehicle 7,Controller,admin,APMv6[COMMS!,192.168.107.2,,工作表1
 Communication System,Comms - Vehicle 7,Amplifier,admin,APMv6[COMMS!,192.168.107.3,,工作表1
-Communication System,Comms - Vehicle 7,(#1-8),admin,APMv6[COMMS!,192.168.107.21-28,,工作表1
+Communication System,Comms - Vehicle 7,INTERCOM (#1-4),admin,APMv6[COMMS!,192.168.107.21-28,,工作表1
 Communication System,Comms - Vehicle 7,Ethernet Switch at MC1*,admin,APMv6COMMS,192.168.107.41,,工作表1
 Communication System,Comms - Vehicle 7,Ethernet Switch at MC2,admin,APMv6[COMMS!,192.168.107.42,,工作表1
 Communication System,Comms - Vehicle 7,Ethernet Switch at MC3,admin,APMv6[COMMS!,192.168.107.43,,工作表1
@@ -99,7 +99,7 @@ Communication System,Comms - Vehicle 7,Ethernet Switch at MC4*,admin,APMv6COMMS,
 Communication System,Comms - Vehicle 8,Access Point,root,APMv6COMMS!,192.168.108.1,,工作表1
 Communication System,Comms - Vehicle 8,Controller,admin,APMv6[COMMS!,192.168.108.2,,工作表1
 Communication System,Comms - Vehicle 8,Amplifier,admin,APMv6[COMMS!,192.168.108.3,,工作表1
-Communication System,Comms - Vehicle 8,(#1-8),admin,APMv6[COMMS!,192.168.108.21-28,,工作表1
+Communication System,Comms - Vehicle 8,INTERCOM (#1-4),admin,APMv6[COMMS!,192.168.108.21-28,,工作表1
 Communication System,Comms - Vehicle 8,Ethernet Switch at MC1*,admin,APMv6COMMS,192.168.108.41,,工作表1
 Communication System,Comms - Vehicle 8,Ethernet Switch at MC2*,admin,APMv6COMMS,192.168.108.42,,工作表1
 Communication System,Comms - Vehicle 8,Ethernet Switch at MC3,admin,APMv6[COMMS!,192.168.108.43,,工作表1
@@ -107,7 +107,7 @@ Communication System,Comms - Vehicle 8,Ethernet Switch at MC4*,admin,APMv6COMMS,
 Communication System,Comms - Vehicle 9,Access Point,root,APMv6COMMS!,192.168.109.1,,工作表1
 Communication System,Comms - Vehicle 9,Controller,admin,APMv6[COMMS!,192.168.109.2,,工作表1
 Communication System,Comms - Vehicle 9,Amplifier,admin,APMv6[COMMS!,192.168.109.3,,工作表1
-Communication System,Comms - Vehicle 9,(#1-8),admin,APMv6[COMMS!,192.168.109.21-28,,工作表1
+Communication System,Comms - Vehicle 9,INTERCOM (#1-4),admin,APMv6[COMMS!,192.168.109.21-28,,工作表1
 Communication System,Comms - Vehicle 9,Ethernet Switch at MC1*,admin,APMv6COMMS,192.168.109.41,,工作表1
 Communication System,Comms - Vehicle 9,Ethernet Switch at MC2,admin,no ping respons!!,192.168.109.42,,工作表1
 Communication System,Comms - Vehicle 9,Ethernet Switch at MC3,admin,APMv6[COMMS!,192.168.109.43,,工作表1
@@ -175,7 +175,7 @@ Communication System,Comms - Vehicle 19,Ethernet Switch at MC2,admin,APMv6[COMMS
 Communication System,Comms - Vehicle 20,Access Point,root,APMv6COMMS!,192.168.120.1,,工作表1
 Communication System,Comms - Vehicle 20,Controller,admin,APMv6[COMMS!,192.168.120.2,,工作表1
 Communication System,Comms - Vehicle 20,Amplifier,admin,APMv6[COMMS!,192.168.120.3,,工作表1
-Communication System,Comms - Vehicle 20,(#1-8),admin,APMv6[COMMS!,192.168.120.21-28,,工作表1
+Communication System,Comms - Vehicle 20,INTERCOM (#1-4),admin,APMv6[COMMS!,192.168.120.21-28,,工作表1
 Communication System,Comms - Vehicle 20,Ethernet Switch at MC1,admin,APMv6[COMMS!,192.168.120.41,,工作表1
 Communication System,Comms - Vehicle 20,Ethernet Switch at MC2,admin,APMv6[COMMS!,192.168.120.42,,工作表1
 Communication System,Comms - Vehicle 20,Ethernet Switch at MC3,admin,APMv6[COMMS!,192.168.120.43,,工作表1
@@ -195,7 +195,7 @@ Communication System,Comms - Vehicle 22,Ethernet Switch at MC2,admin,APMv6[COMMS
 Communication System,Comms - Vehicle 23,Access Point,root,APMv6COMMS!,192.168.123.1,,工作表1
 Communication System,Comms - Vehicle 23,Controller,admin,APMv6[COMMS!,192.168.123.2,,工作表1
 Communication System,Comms - Vehicle 23,Amplifier,admin,APMv6[COMMS!,192.168.123.3,,工作表1
-Communication System,Comms - Vehicle 23,(#1-8),admin,APMv6[COMMS!,192.168.123.21-28,,工作表1
+Communication System,Comms - Vehicle 23,INTERCOM (#1-4),admin,APMv6[COMMS!,192.168.123.21-28,,工作表1
 Communication System,Comms - Vehicle 23,Ethernet Switch at MC1,admin,APMv6[COMMS!,192.168.123.41,,工作表1
 Communication System,Comms - Vehicle 23,Ethernet Switch at MC2,admin,APMv6[COMMS!,192.168.123.42,,工作表1
 Communication System,Comms - Vehicle 23,Ethernet Switch at MC3,admin,APMv6[COMMS!,192.168.123.43,,工作表1
@@ -270,62 +270,24 @@ SCADA System,RTU & Unknown device,RTU-Z,,,10.22.91.23,,工作表1
 SCADA System,RTU & Unknown device,RTU-W,,,10.22.91.31?????,,工作表1
 SCADA System,RTU & Unknown device,RTU-V,,,10.22.91.31?????,,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Server,HKuser,APMv6[ml,4a.1 T1&RRL or SPL ATS Server,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Server,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Server,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Database Server,HKuser,APMv6[ml,4a.2 T1&RRL or SPL Database Server,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Database Server,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Database Server,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL MSA Data Array,monitor,APMv6[ml,4a.3 T1&RRL or SPL MSA Data Array,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL MSA Data Array,manage,APMv6[ml,,OS: Administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Backup Server,HKuser,APMv6[ml,4a.4 T1&RRL or SPL Backup Server,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Backup Server,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Backup Server,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Diagnostic Server,HKuser,APMv6[ml,4a.5 T1&RRL or SPL Diagnostic Server,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Diagnostic Server,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Diagnostic Server,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Data Recorder,HKuser,APMv6[ml,4a.6 T1&RRL or SPL Data Recorder,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Data Recorder,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Data Recorder,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL CA Server,HKuser,APMv6[ml,4a.7 T1&RRL or SPL CA Server,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL CA Server,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL CA Server,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Workstation,HKuser,APMv6[ml,4a.8 T1&RRL or SPL ATS Workstation,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Workstation,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Workstation,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Workstation (IAC),HKuser,HKuser10!,4a.8 T1&RRL or SPL ATS Workstation (IAC),OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Workstation (IAC),HKadmin,HKadmin10!,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ATS Workstation (IAC),sysadmin,HKadmin10!,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,ATS Software,Admin,HKadmin10!,4a.8 ATS Software,ATS: Admidmistrative account for ATS Workstation,工作表1
-Signalling System(CBTC),CBTC - Computer,ATS Software,ABD-T1L-OC,ABD-T1L-OC!,,ATS: APMOC T1L account,工作表1
-Signalling System(CBTC),CBTC - Computer,ATS Software,ABD-SPL-OC,ABD-SPL-OC!,,ATS: APMOC SPL account,工作表1
-Signalling System(CBTC),CBTC - Computer,ATS Software,ABD-AM,ABD-AM!,,ATS: APMAM account (T1 & SP),工作表1
-Signalling System(CBTC),CBTC - Computer,ATS Software,T1L-MC-TH,T1L-MC-TH?!,,ATS: APMMC T1L TH account,工作表1
-Signalling System(CBTC),CBTC - Computer,ATS Software,SPL-MC-TH,SPL-MC-TH?!,,ATS: APMMC SPL TH account,工作表1
-Signalling System(CBTC),CBTC - Computer,ATS Software,T1L-MC,T1L-MC?!,,ATS: APMMC T1L NTH account,工作表1
-Signalling System(CBTC),CBTC - Computer,ATS Software,SPL-MC,SPL-MC?!,,ATS: APMMC SPL NTH account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Diagnostic Workstation,HKuser,APMv6[ml,4a.9 T1&RRL or SPL Diagnostic Workstation,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Diagnostic Workstation,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Diagnostic Workstation,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL MIMIC Workstation,HKuser,APMv6[ml,4a.10 T1&RRL or SPL MIMIC Workstation,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL MIMIC Workstation,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL MIMIC Workstation,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL MIMIC Workstation (IAC),HKuser,HKuser10!,4a.10 T1&RRL or SPL MIMIC Workstation (IAC),OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL MIMIC Workstation (IAC),HKadmin,HKadmin10!,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL MIMIC Workstation (IAC),sysadmin,HKadmin10!,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,ATS Software,Admin,HKadmin10!,4a.10 ATS Software,ATS: Admidmistrative account for ATS Workstation,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL LATS Workstation,HKuser,APMv6[ml,4a.11 T1&RRL or SPL LATS Workstation,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL LATS Workstation,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL LATS Workstation,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL LATS Workstation (IAC),HKuser,HKuser10!,4a.11 T1&RRL or SPL LATS Workstation (IAC),OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL LATS Workstation (IAC),HKadmin,HKadmin10!,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL LATS Workstation (IAC),sysadmin,HKadmin10!,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,ATS Software,Admin,HKadmin10!,4a.11 ATS Software,ATS: Admidmistrative account for ATS Workstation,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Trusted NMS Workstation,HKuser,APMv6[ml,4a.12 T1&RRL or SPL Trusted NMS Workstation,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Trusted NMS Workstation,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL Trusted NMS Workstation,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ZC Diagnostic Collector,HKuser,APMv6[ml,4a.13 T1&RRL or SPL ZC Diagnostic Collector,OS: User account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ZC Diagnostic Collector,HKadmin,APMv6[ml,,OS: Administrative account,工作表1
-Signalling System(CBTC),CBTC - Computer,T1&RRL or SPL ZC Diagnostic Collector,sysadmin,APMv6[ml,,OS: Built-in administrative account,工作表1
 Signalling System(CBTC),CBTC - Network Device (CR40 server room),LAN switch 1 in CR40 server room,admin,HKadmin10!,4b.1 LAN switch 1 in CR40 server room,Name: CR40LANSW1 Management IP:172.21.1.249/16,工作表1
 Signalling System(CBTC),CBTC - Network Device (CR40 server room),LAN switch 2 in CR40 server room,manager,HKadmin10!,4b.2 LAN switch 2 in CR40 server room,Name: CR40LANSW2 Management IP:172.21.1.250/16,工作表1
 Signalling System(CBTC),CBTC - Network Device (CR40 server room),Firewall 1 in CR40 server room,admin,HKadmin10!,4b.3 Firewall 1 in CR40 server room,"Name:CR40_FW1 Cluster Name: CR40_FW, Password: CR40_FW Managent IP: 172.21.1.200/16",工作表1

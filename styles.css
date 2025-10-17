@@ -20,3 +20,17 @@ select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #263252;
 .kvs > div:nth-child(2n){border-bottom:1px dashed #2a3761;padding-bottom:6px;margin-bottom:6px}
 .kvs > div:nth-last-child(-n+2){border-bottom:none;margin-bottom:0;padding-bottom:0}
 .footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}
+
+/* --- Mobile enhancements --- */
+.wrap{max-width:980px;margin:16px auto;padding:0 12px}
+.card{width:100%;max-width:100%;overflow:hidden;word-break:break-word;overflow-wrap:anywhere}
+.kvs .v{word-break:break-word;overflow-wrap:anywhere}
+@media (max-width: 640px){
+  .bar{grid-template-columns:1fr; gap:10px}
+  .kvs{grid-template-columns:120px 1fr}
+  h1{font-size:18px}
+}
+@media (max-width: 420px){
+  .kvs{grid-template-columns:1fr}
+  .kvs .k{opacity:.85}
+}
