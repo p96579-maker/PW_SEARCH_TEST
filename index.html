@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Systems Credentials Browser</title>
+  <meta name="theme-color" content="#0b1220">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="wrap">
+  <h1>Systems Credentials Browser</h1>
+  <div class="bar">
+    <div>
+      <label>System</label>
+      <select id="selSystem"><option value="">All systems</option></select>
+    </div>
+    <div>
+      <label>Category</label>
+      <select id="selCategory" disabled><option value="">All categories</option></select>
+    </div>
+    <div>
+      <label>Equipment</label>
+      <select id="selEquipment" disabled><option value="">All equipment</option></select>
+    </div>
+    <div class="toolbar">
+      <button id="showBtn" class="btn" disabled>Show results</button>
+      <button id="clearBtn" class="btn secondary">Clear</button>
+      <span id="count" class="badge hidden"></span>
+    </div>
+  </div>
+
+  <div id="results" class="results hidden"></div>
+
+  <div class="footer">
+    <span>Source: consolidated from 5 Excel files. Empty fields are hidden. Rows with no data are skipped.</span>
+    <span id="meta"></span>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
