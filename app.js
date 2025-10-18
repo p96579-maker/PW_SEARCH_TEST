@@ -4,48 +4,63 @@
   const showBtn=$("#showBtn"), results=$("#results"), count=$("#count"), meta=$("#meta");
   const loader=document.querySelector('.loader');
 
-  // Load data
+  // ===== Utilities =====
+  const uniq = (arr)=> Array.from(new Set((arr||[]).filter(Boolean)))
+    .sort((x,y)=> String(x).localeCompare(String(y),'en',{sensitivity:'base'}));
+  const esc=s=>String(s||'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  function fill(sel,vals,placeholder){
+    const list = uniq(vals||[]);
+    const prev = sel.value;
+    sel.innerHTML = '';
+    const mk=(v,l)=>{ const o=document.createElement('option'); o.value=v; o.textContent=v||l; return o; };
+    sel.appendChild(mk('', placeholder));
+    list.forEach(v=> sel.appendChild(mk(v, placeholder)));
+    sel.value = list.includes(prev) ? prev : '';
+  }
+
+  // ===== Data load =====
   let DATA=[];
   try{
     const r=await fetch('assets/data.json?_='+Date.now());
     DATA = await r.json();
-  }catch(e){ console.error('load data failed', e); }
-  meta.textContent=(DATA?.length||0)+' rows';
-  setTimeout(()=>loader.classList.add('hidden'), 300);
+  }catch(e){ console.error('Data load failed', e); }
+  meta.textContent = (DATA?.length||0)+' rows';
+  if(loader) setTimeout(()=>loader.classList.add('hidden'), 300);
 
-  function safeSort(arr){try{return arr.safeSort([...new Set(a.filter(Boolean))]);}catch(e){return arr.sort();}}
-  const uniq=a=>[...new Set(a.filter(Boolean))].safeSort([...new Set(a.filter(Boolean))]);
-  const esc=s=>String(s||'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-
-  function fill(sel,vals,all){ const prev=sel.value; sel.innerHTML='';
-    const mk=(v,l)=>{ const o=document.createElement('option'); o.value=v; o.textContent=v||l; return o; };
-    sel.appendChild(mk('',all)); vals.forEach(v=>sel.appendChild(mk(v,all)));
-    sel.value=vals.includes(prev)?prev:'';
-  }
-
-  function buildSystem(){ fill(selSys,uniq(DATA.map(d=>d.System)),'All systems'); selSys.disabled=false; changeSystem(); }
+  // ===== Cascading selects =====
   function changeSystem(){
     const sys=selSys.value;
     const subset=sys?DATA.filter(d=>d.System===sys):DATA;
-    fill(selCat,uniq(subset.map(d=>d.Category)),'All categories'); selCat.disabled=false; changeCategory();
+    fill(selCat, subset.map(d=>d.Category), 'All categories');
+    selCat.disabled=false;
+    changeCategory();
   }
   function changeCategory(){
     const sys=selSys.value, cat=selCat.value;
-    let subset=DATA.slice(); if(sys) subset=subset.filter(d=>d.System===sys); if(cat) subset=subset.filter(d=>d.Category===cat);
-    fill(selEqp,uniq(subset.map(d=>d.Equipment)),'All equipment'); selEqp.disabled=false;
-    showBtn.disabled=!(selSys.value||selCat.value||selEqp.value);
+    let subset=DATA.slice();
+    if(sys) subset=subset.filter(d=>d.System===sys);
+    if(cat) subset=subset.filter(d=>d.Category===cat);
+    fill(selEqp, subset.map(d=>d.Equipment), 'All equipment');
+    selEqp.disabled=false;
+    showBtn.disabled = !(selSys.value||selCat.value||selEqp.value);
+  }
+  function buildSystem(){
+    fill(selSys, DATA.map(d=>d.System), 'All systems');
+    selSys.disabled=false;
+    changeSystem();
   }
 
-  // ---------- Smart split helpers ----------
+  // ===== Smart split helpers =====
   const ipv4Re = /\b(?:25[0-5]|2[0-4]\d|1?\d{1,2})(?:\.(?:25[0-5]|2[0-4]\d|1?\d{1,2})){3}\b/g;
 
   function splitIPs(s){
     if(!s) return [];
-    const ips = (s.match(ipv4Re)||[]);
+    const ips = (String(s).match(ipv4Re)||[]);
     if(ips.length>1) return ips;
     const parts = String(s).split(/[,;&]+/).map(x=>x.trim()).filter(Boolean);
     const valid = parts.filter(p=>ipv4Re.test(p));
-    return ips.length?ips:valid.length?valid:parts.length?parts:[s];
+    return ips.length?ips:valid.length?valid:parts.length?parts:[String(s)];
   }
 
   function splitNumbered(s){
@@ -67,25 +82,28 @@
     return [s];
   }
 
+  // Label markers: "<label>:" or "<label> -"
+  const labelColonRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,6})\s*:)/g;
+  const labelHyphenRe = /(?:^|\s)((?:[A-Za-z][A-Za-z0-9 /&]+?)\s*-\s+)/g;
+
   function preprocessRemark(s){
     if(!s) return s;
     let t = String(s);
+    // Fix: Name: \n VALUE   Management IP:
     t = t.replace(/Name:\s*?\n?\s*("?[^"\n]+?"?)\s+Management\s*IP:\s*/gi, (m, name) => {
       return `Name: ${name} | Management IP: `;
     });
     return t;
   }
 
-  const labelColonRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,6})\s*:)/g;
-  const labelHyphenRe = /(?:^|\s)((?:[A-Za-z][A-Za-z0-9 /&]+?)\s*-\s+)/g;
-
   function splitLabeled(s){
     if(!s) return [];
     s = String(s).replace(/\r/g,'').trim();
     if(!s) return [];
-    let marked = s.replace(labelColonRe, (m,g)=>'|'+g)
-                  .replace(labelHyphenRe, (m,g)=>'|'+g);
+    let marked = s.replace(labelColonRe, (m,g)=>'|'+g).replace(labelHyphenRe, (m,g)=>'|'+g);
     let parts = marked.split('|').map(x=>x.trim()).filter(Boolean);
+
+    // merge dangling labels (e.g., "Name:" + next value)
     const merged=[];
     for(let i=0;i<parts.length;i++){
       const cur = parts[i].replace(/\s*\n\s*/g,' ').trim();
@@ -99,10 +117,12 @@
         merged.push(cur);
       }
     }
+
+    // re-split if merged chunk仍有其他標籤
     const finalParts=[];
     for(const p of merged){
-      let again = p.replace(labelColonRe, (m,g,offset)=> (p.indexOf(m)===0 ? g : '||'+g))
-                   .replace(labelHyphenRe, (m,g,offset)=> (p.indexOf(m)===0 ? g : '||'+g));
+      let again = p.replace(labelColonRe, (m,g)=> (p.indexOf(m)===0 ? g : '||'+g))
+                   .replace(labelHyphenRe, (m,g)=> (p.indexOf(m)===0 ? g : '||'+g));
       if(again.indexOf('||')>=0){
         finalParts.push(...again.split('||').map(t=>t.trim()).filter(Boolean));
       }else{
@@ -116,10 +136,12 @@
     const pre = preprocessRemark(s);
     let parts = splitLabeled(pre);
     if(!parts.length) parts = [pre].filter(Boolean);
+    // 再把每段做編號拆分
     parts = parts.map(p => splitNumbered(p)).flat();
     return parts;
   }
 
+  // ===== Filter + render =====
   function getFiltered(){
     const sys=selSys.value, cat=selCat.value, eqp=selEqp.value;
     let s=DATA.slice();
@@ -163,11 +185,13 @@
     });
   }
 
+  // ===== Events =====
   selSys.addEventListener('change',()=>{ changeSystem(); results.classList.add('hidden'); count.classList.add('hidden'); showBtn.disabled=!(selSys.value||selCat.value||selEqp.value); });
   selCat.addEventListener('change',()=>{ changeCategory(); results.classList.add('hidden'); count.classList.add('hidden'); showBtn.disabled=!(selSys.value||selCat.value||selEqp.value); });
   selEqp.addEventListener('change',()=>{ showBtn.disabled=!(selSys.value||selCat.value||selEqp.value); });
   showBtn.addEventListener('click',render);
   document.addEventListener('click',e=>{ if(e.target && e.target.id==='clearBtn'){ selSys.value=''; changeSystem(); selCat.value=''; changeCategory(); selEqp.value=''; results.classList.add('hidden'); count.classList.add('hidden'); showBtn.disabled=true; } });
 
+  // init
   buildSystem();
 })();
