@@ -183,7 +183,7 @@ Please refer to the onboard comms equipment IP address list:
     return [s];
   }
 
-  const labelColonRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,6})\s*:)/g;
+  const labelColonRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,12})\s*:)/g;
   const labelHyphenRe = /(?:^|\s)((?:[A-Za-z][A-Za-z0-9 /&]+?)\s*-\s+)/g;
 
   function preprocessRemark(s){
@@ -199,7 +199,7 @@ Please refer to the onboard comms equipment IP address list:
     if(!s) return [];
     s = String(s).replace(/\r/g,'').trim();
     if(!s) return [];
-    let marked = s.replace(labelColonRe, (m,g)=>'|'+g).replace(labelHyphenRe, (m,g)=>'|'+g);
+    let marked = s.replace(labelColonRe, (m,g,offset)=> (offset===0? g : '|'+g)).replace(labelHyphenRe, (m,g)=>'|'+g);
     let parts = marked.split('|').map(x=>x.trim()).filter(Boolean);
     const merged=[];
     for(let i=0;i<parts.length;i++){
