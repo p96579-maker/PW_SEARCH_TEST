@@ -37,6 +37,7 @@
     showBtn.disabled=!(selSys.value||selCat.value||selEqp.value);
   }
 
+  
   // ---------- Smart split helpers ----------
   const ipv4Re = /\b(?:25[0-5]|2[0-4]\d|1?\d{1,2})(?:\.(?:25[0-5]|2[0-4]\d|1?\d{1,2})){3}\b/g;
 
@@ -68,19 +69,39 @@
     return [s];
   }
 
-  // Insert marker before any "<label>:" token. Covers things like:
-  // "T1 line New NMS Server:", "SP line AS1:", "CCR SPL AS1:", "Name:", "FTP server:", etc.
-  const labelRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,6})\s*:)/g;
+  // Insert markers before "<label>:" OR "<label> -"
+  const labelColonRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,6})\s*:)/g;
+  const labelHyphenRe = /(?:^|\s)((?:[A-Za-z][A-Za-z0-9 /&]+?)\s*-\s+)/g;
+
   function splitLabeled(s){
     if(!s) return [];
     s = String(s).replace(/\r/g,'').trim();
     if(!s) return [];
-    let marked = s.replace(labelRe, (m, g1)=> '|' + g1);
+
+    let marked = s.replace(labelColonRe, (m,g)=>'|'+g)
+                  .replace(labelHyphenRe, (m,g)=>'|'+g);
+
     let parts = marked.split('|').map(x=>x.trim()).filter(Boolean);
-    if(parts.length<=1){
+
+    // Merge dangling "Label:" with next non-label part (handles "Name:\\nValue")
+    const merged=[];
+    for(let i=0;i<parts.length;i++){
+      const cur = parts[i].replace(/\s*\n\s*/g,' ').trim();
+      const next = (i+1<parts.length) ? parts[i+1].trim() : '';
+      const curIsLabelOnly = /:\s*$|-\s*$/.test(cur);
+      const nextStartsWithLabel = /^.{0,40}:\s|-\s/.test(next);
+      if(curIsLabelOnly && next && !nextStartsWithLabel){
+        merged.push((cur+' '+next).replace(/\s*\n\s*/g,' ').trim());
+        i++;
+      }else{
+        merged.push(cur);
+      }
+    }
+
+    if(merged.length<=1){
       return splitNumbered(s);
     }
-    return parts;
+    return merged;
   }
 
   function splitRemark(s){
@@ -88,6 +109,7 @@
     if(labeled.length>1) return labeled;
     return splitNumbered(s);
   }
+
 
   function getFiltered(){
     const sys=selSys.value, cat=selCat.value, eqp=selEqp.value;
