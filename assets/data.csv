@@ -1,11 +1,15 @@
 ﻿System,Category,Equipment,Login ID,Password,IP,Remark,Sheet
-Communication System,CCTV,CCTV camera,root,manager,,"Use onboard CCTV camera IP address to login 
+Communication System,CCTV,CCTV camera,root,manager,,"Use onboard CCTV camera IP address to login:
+
 4-Car Train - 192.168.1xx.11-18 
 2-Car Train - 192.168.1xx.11-14 
+
 **Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",工作表1
-Communication System,CCTV,Decoder,root,manager,,"Use respective IP address to login 
+Communication System,CCTV,Decoder,root,manager,,"Use respective IP address to login:
+
 4-Car Train - 192.168.1xx.51-58 
 2-Car Train - 192.168.1xx.51-54 
+
 **Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",工作表1
 Communication System,CCTV,VCA console (CCTV),depot,dpass,,(APM onboard CCTV only) Milestone login via VCA Console(connected VCA server) Server Address: http://192.168.1.221:95/ Authentication: Basic authentication,工作表1
 Communication System,CCTV,NVR server,Administrator,P534admin,,"T1 Line, IP address: 192.168.8.6/16 SP Line, IP address: (TBA)",工作表1
@@ -24,21 +28,27 @@ Communication System,Platform PIS/PAS,Pier DMS Controller,admin,admin,,Controlle
 Communication System,Platform PIS/PAS,FBTC/CBTC DMS Changeover Server (NVR Server in 1P050),Administrator,P534admin,,For SPL DMS changeover from FBTC to CBTC IP Address: 192.168.101.7,工作表1
 Communication System,Comms,AP,root,manager,,Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.1 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5,工作表1
 Communication System,Comms,PEI,admin,admin,,"Please refer to the onboard comms equipment IP address list: 
+
 4-Car Train - 192.168.1xx.21-28 
 2-Car Train - 192.168.1xx.21-24 
+
 **Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",工作表1
 Communication System,Comms,TCX,admin,admin,,Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.2 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5,工作表1
 Communication System,Comms,Onboard PA amplifier,admin,admin,,Please refer to the onboard comms equipment IP address list IP address - 192.168.1xx.3 Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5,工作表1
 Communication System,Comms,Onboard DMS,root,erphost,,"Please refer to the onboard comms equipment IP address list:
+
 4-CarTrain - 192.168.1xx.31-38 
-2-CarTrain - 192.168.1xx.31-34 
+2-CarTrain - 192.168.1xx.31-34
+
 **Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",工作表1
 Communication System,Comms,"Comms NMS, Windows 10 Login","1) admin, for Windows 10 login 2) admin, for SyncUP Time Client","1) manager, for Windows 10 login 2) admin, for SyncUp Time Client",,"Please refer to the onboard comms equipment IP address list 1)192.168.8.7 for T1,RR @ BCR 2)192.168.8.10 for SP @ BCR 3) 192.168.1.108/118.35 or 192.168.3.100 or 192.168.9.9 for T1, RR @ CCR 4) 192.168.9.9 for T1, SP @ CCR",工作表1
 Communication System,Comms,"Comms NMS, SyncUp Time Client Login",admin,admin,,,工作表1
 Communication System,Comms,Comms console (IPPA Paging Station),admin,admin,,"Please refer to the onboard comms equipment IP address list 1) DCR: 192.168.9.1 @ T1 / 192.168.9.2 @ RR / 192.168.9.1 @ SP 2) CCR: 192.168.9.11 @ T1 / 192.168.9.12 @ RR / 192.168.9.11 @ SP 3) TDMO: 192.168.9.21, 192.168.9.2 @ T1 / 192.9.25192.168.9.22 @ RR / 192.168.9.21 @ SP",工作表1
 Communication System,Comms,Onboard Ethernet Network Switch,root admin,manager,,"Please refer to the onboard comms equipment IP address list: 
+
 4-CarTrain - 192.168.1xx.41-44 
 2-CarTrain - 192.168.1xx.41-42 
+
 **Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",工作表1
 Communication System,Comms,Wayside AP,root,manager,,Please refer to the IP address assignemnt for AP in O&M manual 1)192.168.10.1-46 @ T1 2)192.168.11.1-11 @ RR 3)192.168.12.1-2 @ Depot 4)192.168.13.1-10 @ SP 5)192.168.13.11 @ SP Depot 6)192.168.13.12 @ Tee off to New Depot 7)192.168.13.13-14 @ New Depot,工作表1
 Communication System,Comms,T1L Communication Exchange Server (CXS),Not provided by supplier,Not provided by supplier,,"CXS1 - 192.168.8.1 CXS2 - 192.168.8.2 Not root/manager, not admin/admin",工作表1

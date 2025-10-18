@@ -6,7 +6,7 @@
     "Login ID": "root",
     "Password": "manager",
     "IP": "",
-    "Remark": "Use onboard CCTV camera IP address to login \n4-Car Train - 192.168.1xx.11-18 \n2-Car Train - 192.168.1xx.11-14 \n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark": "Use onboard CCTV camera IP address to login:\n\n4-Car Train - 192.168.1xx.11-18 \n2-Car Train - 192.168.1xx.11-14 \n\n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
     "Sheet": "工作表1"
   },
   {
@@ -16,7 +16,7 @@
     "Login ID": "root",
     "Password": "manager",
     "IP": "",
-    "Remark": "Use respective IP address to login \n4-Car Train - 192.168.1xx.51-58 \n2-Car Train - 192.168.1xx.51-54 \n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark": "Use respective IP address to login:\n\n4-Car Train - 192.168.1xx.51-58 \n2-Car Train - 192.168.1xx.51-54 \n\n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
     "Sheet": "工作表1"
   },
   {
@@ -166,7 +166,7 @@
     "Login ID": "admin",
     "Password": "admin",
     "IP": "",
-    "Remark": "Please refer to the onboard comms equipment IP address list: \n4-Car Train - 192.168.1xx.21-28 \n2-Car Train - 192.168.1xx.21-24 \n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark": "Please refer to the onboard comms equipment IP address list: \n\n4-Car Train - 192.168.1xx.21-28 \n2-Car Train - 192.168.1xx.21-24 \n\n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
     "Sheet": "工作表1"
   },
   {
@@ -196,7 +196,7 @@
     "Login ID": "root",
     "Password": "erphost",
     "IP": "",
-    "Remark": "Please refer to the onboard comms equipment IP address list:\n4-CarTrain - 192.168.1xx.31-38 \n2-CarTrain - 192.168.1xx.31-34 \n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark": "Please refer to the onboard comms equipment IP address list:\n\n4-CarTrain - 192.168.1xx.31-38 \n2-CarTrain - 192.168.1xx.31-34\n\n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
     "Sheet": "工作表1"
   },
   {
@@ -236,7 +236,7 @@
     "Login ID": "root admin",
     "Password": "manager",
     "IP": "",
-    "Remark": "Please refer to the onboard comms equipment IP address list: \n4-CarTrain - 192.168.1xx.41-44 \n2-CarTrain - 192.168.1xx.41-42 \n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
+    "Remark": "Please refer to the onboard comms equipment IP address list: \n\n4-CarTrain - 192.168.1xx.41-44 \n2-CarTrain - 192.168.1xx.41-42 \n\n**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5",
     "Sheet": "工作表1"
   },
   {
