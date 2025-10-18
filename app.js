@@ -2,10 +2,18 @@
   const $=s=>document.querySelector(s);
   const selSys=$("#selSystem"), selCat=$("#selCategory"), selEqp=$("#selEquipment");
   const showBtn=$("#showBtn"), results=$("#results"), count=$("#count"), meta=$("#meta");
+  const loader=document.querySelector('.loader');
 
+  // Load data
   let DATA=[];
-  try{ const r=await fetch('assets/data.json?_='+Date.now()); DATA=await r.json(); }catch(e){ console.error(e); }
+  try{
+    const r=await fetch('assets/data.json?_='+Date.now());
+    DATA = await r.json();
+  }catch(e){ console.error('load data failed', e); }
+
+  // Hide loader after a short delay (visible on ctrl+F5)
   meta.textContent=(DATA?.length||0)+' rows';
+  setTimeout(()=>loader.classList.add('hidden'), 300);
 
   const uniq=a=>[...new Set(a.filter(Boolean))].sort((x,y)=>x.localeCompare(y,'en'));
   const esc=s=>String(s||'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -36,52 +44,49 @@
     if(!s) return [];
     const ips = (s.match(ipv4Re)||[]);
     if(ips.length>1) return ips;
-    // fallback: split by comma/semicolon/& and trim if they look like IPs
     const parts = String(s).split(/[,;&]+/).map(x=>x.trim()).filter(Boolean);
-    const valid = parts.filter(p=>ipv4Re.test(p) && (ipv4Re.lastIndex=0)===0); // reset not reliable; re-test
+    const valid = parts.filter(p=>ipv4Re.test(p));
     return ips.length?ips:valid.length?valid:parts.length?parts:[s];
   }
 
-  // Split numbered items like "1) item  2) item", or double-spaced, or ampersand-separated, or newline
-  function splitList(s){
+  function splitNumbered(s){
+    s = String(s||'').replace(/\r/g,'').trim();
     if(!s) return [];
-    s = String(s).replace(/\r/g,'').trim();
-    // already newline-separated
-    if(s.includes('\n')) return s.split('\n').map(x=>x.trim()).filter(Boolean);
-    // number-bracket pattern
-    const numbered = [];
-    s.replace(/(?:^|\s)(\d+\)\s*[^]+?)(?=(?:\s*\d+\)\s*)|$)/g, (m, g1)=>{ numbered.push(g1.trim()); return m; });
-    if(numbered.length>1) return numbered;
-    // split by two or more spaces
-    if(/\s{2,}/.test(s)){ return s.split(/\s{2,}/).map(x=>x.trim()).filter(Boolean); }
-    // split by " & "
-    if(s.includes(' & ')){ return s.split(/\s*&\s*/).map(x=>x.trim()).filter(Boolean); }
-    // split by comma if there are multiple segments with parentheses
+    const lines=[];
+    const mFirst = s.match(/\b1\)\s*/);
+    if(mFirst){
+      const prefix = s.slice(0, mFirst.index).trim();
+      if(prefix) lines.push(prefix);
+      const regex = /(\d+\))\s*([^]+?)(?=(?:\s*\d+\))|$)/g;
+      let m; while((m=regex.exec(s))){ lines.push((m[1]+' '+m[2]).trim()); }
+      return lines;
+    }
+    if(/\s{2,}/.test(s)) return s.split(/\s{2,}/).map(x=>x.trim()).filter(Boolean);
+    if(s.includes(' & ')) return s.split(/\s*&\s*/).map(x=>x.trim()).filter(Boolean);
     const commaParts = s.split(/\s*,\s*/).map(x=>x.trim()).filter(Boolean);
-    if(commaParts.length>1) return commaParts;
+    if (commaParts.length>1) return commaParts;
     return [s];
   }
 
-  // Special split for Remark / NOTE: break by label tokens with colon
-  const remarkLabels = [
-    'Name','Cluster Name','Management IP','Managent IP','Password',
-    'FTP server','FTP client','TX','RX','T1 line AS1','SP line Record Server'
-  ];
-  const remarkLabelRe = new RegExp('(?:^|\\s)(' + remarkLabels.map(l=>l.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&')).join('|') + ')\\s*:', 'gi');
-  function splitRemark(s){
+  // Insert marker before any "<label>:" token. Covers things like:
+  // "T1 line New NMS Server:", "SP line AS1:", "CCR SPL AS1:", "Name:", "FTP server:", etc.
+  const labelRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,6})\s*:)/g;
+  function splitLabeled(s){
     if(!s) return [];
     s = String(s).replace(/\r/g,'').trim();
     if(!s) return [];
-    // If contains our labels multiple times, insert | markers before labels and split
-    let marked = s.replace(remarkLabelRe, (m)=>'|'+m.trim());
+    let marked = s.replace(labelRe, (m, g1)=> '|' + g1);
     let parts = marked.split('|').map(x=>x.trim()).filter(Boolean);
-    // Also split any remaining newlines or explicit " & "
-    parts = parts.map(p=>{
-      if(p.includes('\n')) return p.split('\n').map(x=>x.trim()).filter(Boolean);
-      if(p.includes(' & ')) return p.split(/\s*&\s*/).map(x=>x.trim()).filter(Boolean);
-      return [p];
-    }).flat();
+    if(parts.length<=1){
+      return splitNumbered(s);
+    }
     return parts;
+  }
+
+  function splitRemark(s){
+    const labeled = splitLabeled(s);
+    if(labeled.length>1) return labeled;
+    return splitNumbered(s);
   }
 
   function getFiltered(){
@@ -110,10 +115,11 @@
       const add=(k,v,kind)=>{ v=String(v||'').trim(); if(!v||v.toLowerCase()==='nan')return;
         let parts=[v];
         if(kind==='ip') parts=splitIPs(v);
-        else if(kind==='login' || kind==='password') parts=splitList(v);
+        else if(kind==='login' || kind==='password') parts=splitNumbered(v);
         else if(kind==='remark') parts=splitRemark(v);
         const K=document.createElement('div'); K.className='k'; K.textContent=k;
-        const V=document.createElement('div'); V.innerHTML=parts.map(p=>esc(p)).join('<br>');
+        const V=document.createElement('div');
+        V.innerHTML=parts.map(p=>`<div class="vline">${esc(p).replace(ipv4Re, m=>'<code>'+m+'</code>')}</div>`).join('');
         kv.appendChild(K); kv.appendChild(V);
       };
       add('Login ID', r['Login ID'], 'login');
