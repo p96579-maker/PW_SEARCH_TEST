@@ -54,36 +54,17 @@
   // ---- Remark overrides (RAW mode to keep exact line breaks) ----
   const RAW_PREFIX = '!!RAW!!\n';
   const OVERRIDE_REMARKS = [
-    { cat:/cctv/i, eq:/(cctv camera|decoder platform)/i, remark:`Use onboard CCTV camera IP address to login:
+    // Communication System - CCTV · CCTV camera -> keep ONLY the short block
+    { cat:/^cctv$/i, eq:/^cctv camera$/i, remark:`Use onboard CCTV camera IP address to login:
 4-Car Train - 192.168.1xx.11-18
 2-Car Train - 192.168.1xx.11-14
-**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5
-
-Use respective IP address to login:
-4-Car Train - 192.168.1xx.51-58
-2-Car Train - 192.168.1xx.51-54
-**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5
-
-For T1L / RRL Located at CR40 SER, Old Depot IP address: 192.168.7.3
-For SPL Located at 1P005 SPL SER (New SER), Old Depot IP address: 192.168.8.3
-
-For T1L / RRL Located at CR40 SER, Old Depot IP address: 192.168.7.4
-For SPL Located at 1P005 SPL SER (New SER), Old Depot IP address: 192.168.8.4
-
-Please refer to the onboard comms equipment IP address list:
-4-Car Train - 192.168.1xx.21-28
-2-Car Train - 192.168.1xx.21-24
-**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5
-
-Please refer to the onboard comms equipment IP address list:
-4-CarTrain - 192.168.1xx.31-38
-2-CarTrain - 192.168.1xx.31-34
-**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5
-
-Please refer to the onboard comms equipment IP address list:
-4-CarTrain - 192.168.1xx.41-44
-2-CarTrain - 192.168.1xx.41-42
 **Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5` },
+    // Communication System - CCTV · Decoder (or Decoder Platform) -> same layout as CCTV camera
+    { cat:/^cctv$/i, eq:/(^decoder$|^decoder platform$)/i, remark:`Use onboard CCTV camera IP address to login:
+4-Car Train - 192.168.1xx.11-18
+2-Car Train - 192.168.1xx.11-14
+**Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5` },
+    // PIS/PAS Wayside server 1/2 and Comms items keep previous long guidance (unchanged)
     { cat:/(pis\/pas|platform pis\/pas)/i, eq:/wayside interface server\s*(1|2)/i, remark:`Use onboard CCTV camera IP address to login:
 4-Car Train - 192.168.1xx.11-18
 2-Car Train - 192.168.1xx.11-14
@@ -144,7 +125,7 @@ Please refer to the onboard comms equipment IP address list:
 4-CarTrain - 192.168.1xx.41-44
 2-CarTrain - 192.168.1xx.41-42
 **Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5` },
-  ];
+];
   function getOverriddenRemark(category, equipment, fallback){
     const c = String(category||''); const e = String(equipment||'');
     for(const r of OVERRIDE_REMARKS){
