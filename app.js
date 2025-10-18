@@ -38,6 +38,7 @@
   }
 
   
+  
   // ---------- Smart split helpers ----------
   const ipv4Re = /\b(?:25[0-5]|2[0-4]\d|1?\d{1,2})(?:\.(?:25[0-5]|2[0-4]\d|1?\d{1,2})){3}\b/g;
 
@@ -78,12 +79,13 @@
     s = String(s).replace(/\r/g,'').trim();
     if(!s) return [];
 
+    // 1) Mark both colon and hyphen label styles
     let marked = s.replace(labelColonRe, (m,g)=>'|'+g)
                   .replace(labelHyphenRe, (m,g)=>'|'+g);
 
     let parts = marked.split('|').map(x=>x.trim()).filter(Boolean);
 
-    // Merge dangling "Label:" with next non-label part (handles "Name:\\nValue")
+    // 2) Merge dangling "Label:" with next non-label part (handles "Name:\nValue")
     const merged=[];
     for(let i=0;i<parts.length;i++){
       const cur = parts[i].replace(/\s*\n\s*/g,' ').trim();
@@ -92,16 +94,30 @@
       const nextStartsWithLabel = /^.{0,40}:\s|-\s/.test(next);
       if(curIsLabelOnly && next && !nextStartsWithLabel){
         merged.push((cur+' '+next).replace(/\s*\n\s*/g,' ').trim());
-        i++;
+        i++; // skip next
       }else{
         merged.push(cur);
       }
     }
 
-    if(merged.length<=1){
+    // 3) If any merged chunk still contains multiple labels (e.g. "Name: \"X\"  Management IP: \"Y\""),
+    //    re-split inside that chunk so each label becomes its own line.
+    const finalParts=[];
+    for(const p of merged){
+      // inject '||' before labels except at start
+      let again = p.replace(labelColonRe, (m,g,offset)=> (p.indexOf(m)===0 ? g : '||'+g))
+                   .replace(labelHyphenRe, (m,g,offset)=> (p.indexOf(m)===0 ? g : '||'+g));
+      if(again.indexOf('||')>=0){
+        finalParts.push(...again.split('||').map(t=>t.trim()).filter(Boolean));
+      }else{
+        finalParts.push(p);
+      }
+    }
+
+    if(finalParts.length<=1){
       return splitNumbered(s);
     }
-    return merged;
+    return finalParts;
   }
 
   function splitRemark(s){
@@ -109,6 +125,7 @@
     if(labeled.length>1) return labeled;
     return splitNumbered(s);
   }
+
 
 
   function getFiltered(){
