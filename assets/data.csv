@@ -41,7 +41,9 @@ Communication System,Comms - IAC,Access Switch #1/#2,admin,APMv6[COMMS!,,,工作
 Communication System,Comms - CR40,Core Switch #1/#2/#3,admin,APMv6[COMMS!,,,工作表1
 Communication System,Comms - CR40,Access Switch #1,admin,APMv6[COMMS!,,,工作表1
 Communication System,Comms - CR40,Access Switch #2,admin,APMv6[COMMS!,,,工作表1
-Communication System,Comms - CR40,Server,admin (windows) admin (H3C iMC),P@ssw0rd Pwd@12345,,VLAN ID : 10,工作表1
+Communication System,Comms - CR40,NMS Server,"admin (windows)
+admin (H3C iMC)","P@ssw0rd
+Pwd@12345","192.168.8.241, 192.168.8.243",VLAN ID : 10,工作表1
 Communication System,Comms - CR40,CXS1,Not provided by supplier,Not provided by supplier,,,工作表1
 Communication System,Comms - CR40,CXS2,Not provided by supplier,Not provided by supplier,,,工作表1
 Communication System,Comms - BCR,COMMS NMS,admin (windows) admin (SyncUP),APMv6[COMMS! admin,,,工作表1
@@ -53,7 +55,9 @@ Communication System,Comms - BIAC,Access Switch #1/#2,admin,APMv6[COMMS!,,,工�
 Communication System,Comms - 1P050,Core Switch #1/#2/#3,admin,APMv6[COMMS!,,,工作表1
 Communication System,Comms - 1P050,Access Switch #1,admin,APMv6[COMMS!,,,工作表1
 Communication System,Comms - 1P050,Access Switch #2,admin,APMv6[COMMS!,,,工作表1
-Communication System,Comms - 1P050,Server,admin (windows) admin (H3C iMC),P@ssw0rd Pwd@12345,,VLAN ID : 10,工作表1
+Communication System,Comms - 1P050,NMS Server,"admin (windows)
+admin (H3C iMC)","P@ssw0rd
+Pwd@12345","192.168.8.242, 192.168.8.244",VLAN ID : 10,工作表1
 Communication System,Comms - 1P050,CXS1,Not provided by supplier,Not provided by supplier,,,工作表1
 Communication System,Comms - 1P050,CXS2,Not provided by supplier,Not provided by supplier,,,工作表1
 Communication System,Comms - Tunnnel AP,Wireless Access Point (AP1-48),root,APMv6COMMS!,,,工作表1
@@ -244,8 +248,8 @@ SCADA System,RTU & Unknown device,RTU-E,,,192.168.3.5,,工作表1
 SCADA System,RTU & Unknown device,RTU-F,,,192.168.3.6,,工作表1
 SCADA System,RTU & Unknown device,RTU-G,,,192.168.3.7,,工作表1
 SCADA System,RTU & Unknown device,RTU-H,,,192.168.3.8,,工作表1
-SCADA System,RTU & Unknown device,RTU-I,,,192.168.3.9,,工作表1
-SCADA System,RTU & Unknown device,RTU-J,,,192.168.3.9,,工作表1
+SCADA System,RTU & Unknown device,RTU-I,,,192.168.3.9 - 192.168.3.12,,工作表1
+SCADA System,RTU & Unknown device,RTU-J,,,192.168.3.9 - 192.168.3.12,,工作表1
 SCADA System,RTU & Unknown device,Unknown,,,192.168.3.13,CR40_AS1 1/0/21,工作表1
 SCADA System,RTU & Unknown device,Unknown,,,192.168.3.14,CR40_AS1 1/0/21,工作表1
 SCADA System,RTU & Unknown device,Unknown,,,192.168.3.15,CR40_AS2 1/0/21,工作表1
