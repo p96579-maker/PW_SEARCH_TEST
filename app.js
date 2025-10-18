@@ -10,12 +10,10 @@
     const r=await fetch('assets/data.json?_='+Date.now());
     DATA = await r.json();
   }catch(e){ console.error('load data failed', e); }
-
-  // Hide loader after a short delay (visible on ctrl+F5)
   meta.textContent=(DATA?.length||0)+' rows';
   setTimeout(()=>loader.classList.add('hidden'), 300);
 
-  const uniq=a=>[...new Set(a.filter(Boolean))].sort((x,y)=>x.localeCompare(y,'en'));
+  const uniq=a=>[...new Set(a.filter(Boolean))].sort((x,y)=>x.localeCompare(b,'en'));
   const esc=s=>String(s||'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
   function fill(sel,vals,all){ const prev=sel.value; sel.innerHTML='';
@@ -37,8 +35,6 @@
     showBtn.disabled=!(selSys.value||selCat.value||selEqp.value);
   }
 
-  
-  
   // ---------- Smart split helpers ----------
   const ipv4Re = /\b(?:25[0-5]|2[0-4]\d|1?\d{1,2})(?:\.(?:25[0-5]|2[0-4]\d|1?\d{1,2})){3}\b/g;
 
@@ -70,7 +66,15 @@
     return [s];
   }
 
-  // Insert markers before "<label>:" OR "<label> -"
+  function preprocessRemark(s){
+    if(!s) return s;
+    let t = String(s);
+    t = t.replace(/Name:\s*?\n?\s*("?[^"\n]+?"?)\s+Management\s*IP:\s*/gi, (m, name) => {
+      return `Name: ${name} | Management IP: `;
+    });
+    return t;
+  }
+
   const labelColonRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,6})\s*:)/g;
   const labelHyphenRe = /(?:^|\s)((?:[A-Za-z][A-Za-z0-9 /&]+?)\s*-\s+)/g;
 
@@ -78,14 +82,9 @@
     if(!s) return [];
     s = String(s).replace(/\r/g,'').trim();
     if(!s) return [];
-
-    // 1) Mark both colon and hyphen label styles
     let marked = s.replace(labelColonRe, (m,g)=>'|'+g)
                   .replace(labelHyphenRe, (m,g)=>'|'+g);
-
     let parts = marked.split('|').map(x=>x.trim()).filter(Boolean);
-
-    // 2) Merge dangling "Label:" with next non-label part (handles "Name:\nValue")
     const merged=[];
     for(let i=0;i<parts.length;i++){
       const cur = parts[i].replace(/\s*\n\s*/g,' ').trim();
@@ -94,17 +93,13 @@
       const nextStartsWithLabel = /^.{0,40}:\s|-\s/.test(next);
       if(curIsLabelOnly && next && !nextStartsWithLabel){
         merged.push((cur+' '+next).replace(/\s*\n\s*/g,' ').trim());
-        i++; // skip next
+        i++;
       }else{
         merged.push(cur);
       }
     }
-
-    // 3) If any merged chunk still contains multiple labels (e.g. "Name: \"X\"  Management IP: \"Y\""),
-    //    re-split inside that chunk so each label becomes its own line.
     const finalParts=[];
     for(const p of merged){
-      // inject '||' before labels except at start
       let again = p.replace(labelColonRe, (m,g,offset)=> (p.indexOf(m)===0 ? g : '||'+g))
                    .replace(labelHyphenRe, (m,g,offset)=> (p.indexOf(m)===0 ? g : '||'+g));
       if(again.indexOf('||')>=0){
@@ -113,20 +108,16 @@
         finalParts.push(p);
       }
     }
-
-    if(finalParts.length<=1){
-      return splitNumbered(s);
-    }
     return finalParts;
   }
 
   function splitRemark(s){
-    const labeled = splitLabeled(s);
-    if(labeled.length>1) return labeled;
-    return splitNumbered(s);
+    const pre = preprocessRemark(s);
+    let parts = splitLabeled(pre);
+    if(!parts.length) parts = [pre].filter(Boolean);
+    parts = parts.map(p => splitNumbered(p)).flat();
+    return parts;
   }
-
-
 
   function getFiltered(){
     const sys=selSys.value, cat=selCat.value, eqp=selEqp.value;
