@@ -85,12 +85,28 @@
   function preprocessRemark(s){
     if(!s) return s;
     let t = String(s);
-    // Name 新行 + Management IP 黐行
-    t = t.replace(/Name:\s*?\n?\s*("?[^"\n]+?"?)\s+Management\s*IP:\s*/gi, (m, name) => {
-      return `Name: ${name} | Management IP: `;
+
+    // Fix Name + Management IP across newline
+    t = t.replace(/Name:\s*?\n?\s*("?[^"\n]+?"?)\s+Management\s*IP:\s*/gi, function(_m, name){
+      return 'Name: '+name+' | Management IP: ';
     });
-    // Remarks: 一律抽成獨立片段；即使黐喺 2) 後面
-    t = t.replace(/\s*Remarks\s*:/gi, " | Remarks: ");
+
+    // Force Remarks: to be its own label even when glued
+    t = t.replace(/\s*Remarks\s*:/gi, ' | Remarks: ');
+
+    // ---- Numbered list normalization ----
+    // 1)4 -> 1) 4 ; 2)2 -> 2) 2
+    t = t.replace(/(\b\d\))\s*(\d)\b/g, '$1 $2');
+
+    // Remove accidental newline after number marker: "1)\n4" -> "1) 4"
+    t = t.replace(/(\b\d\))\s*[\n\r]+\s*/g, '$1 ');
+
+    // Ensure space before "Car Train": "1) 4Car" -> "1) 4 Car"
+    t = t.replace(/(\b\d\))\s*(\d)\s*Car/gi, '$1 $2 Car');
+
+    // If trailing "2)2" glued to previous sentence, normalize to "2) 2"
+    t = t.replace(/(\d\))\s*(\d)(?=\s*Car)/g, '$1 $2');
+
     return t;
   }
 
@@ -101,7 +117,10 @@
     if(!s) return [];
     s = String(s).replace(/\r/g,'').trim();
     if(!s) return [];
-    let marked = s.replace(labelColonRe, (m,g)=>'|'+g).replace(labelHyphenRe, (m,g)=>'|'+g);
+
+    let marked = s.replace(labelColonRe, function(m,g){return '|'+g})
+                  .replace(labelHyphenRe, function(m,g){return '|'+g});
+
     let parts = marked.split('|').map(x=>x.trim()).filter(Boolean);
 
     const merged=[];
@@ -120,8 +139,8 @@
 
     const finalParts=[];
     for(const p of merged){
-      let again = p.replace(labelColonRe, (m,g)=> (p.indexOf(m)===0 ? g : '||'+g))
-                   .replace(labelHyphenRe, (m,g)=> (p.indexOf(m)===0 ? g : '||'+g));
+      let again = p.replace(labelColonRe, function(m,g){ return (p.indexOf(m)===0 ? g : '||'+g); })
+                   .replace(labelHyphenRe, function(m,g){ return (p.indexOf(m)===0 ? g : '||'+g); });
       if(again.indexOf('||')>=0){
         finalParts.push(...again.split('||').map(t=>t.trim()).filter(Boolean));
       }else{
