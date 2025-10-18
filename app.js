@@ -13,7 +13,8 @@
   meta.textContent=(DATA?.length||0)+' rows';
   setTimeout(()=>loader.classList.add('hidden'), 300);
 
-  const uniq=a=>[...new Set(a.filter(Boolean))].sort((x,y)=>x.localeCompare(b,'en'));
+  function safeSort(arr){try{return arr.safeSort([...new Set(a.filter(Boolean))]);}catch(e){return arr.sort();}}
+  const uniq=a=>[...new Set(a.filter(Boolean))].safeSort([...new Set(a.filter(Boolean))]);
   const esc=s=>String(s||'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
   function fill(sel,vals,all){ const prev=sel.value; sel.innerHTML='';
