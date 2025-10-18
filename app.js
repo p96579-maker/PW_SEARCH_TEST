@@ -51,7 +51,8 @@
     changeSystem();
   }
 
-  // ---- remark overrides for specific Category · Equipment ----
+  // ---- Remark overrides (RAW mode to keep exact line breaks) ----
+  const RAW_PREFIX = '!!RAW!!\n';
   const OVERRIDE_REMARKS = [
     { cat:/cctv/i, eq:/(cctv camera|decoder platform)/i, remark:`Use onboard CCTV camera IP address to login:
 4-Car Train - 192.168.1xx.11-18
@@ -147,7 +148,7 @@ Please refer to the onboard comms equipment IP address list:
   function getOverriddenRemark(category, equipment, fallback){
     const c = String(category||''); const e = String(equipment||'');
     for(const r of OVERRIDE_REMARKS){
-      if(r.cat.test(c) && r.eq.test(e)) return r.remark;
+      if(r.cat.test(c) && r.eq.test(e)) return RAW_PREFIX + r.remark;
     }
     return fallback;
   }
@@ -199,7 +200,8 @@ Please refer to the onboard comms equipment IP address list:
     if(!s) return [];
     s = String(s).replace(/\r/g,'').trim();
     if(!s) return [];
-    let marked = s.replace(labelColonRe, (m,g,offset)=> (offset===0? g : '|'+g)).replace(labelHyphenRe, (m,g)=>'|'+g);
+    let marked = s.replace(labelColonRe, (m,g,offset)=> (offset===0? g : '|'+g))
+                  .replace(labelHyphenRe, (m,g)=>'|'+g);
     let parts = marked.split('|').map(x=>x.trim()).filter(Boolean);
     const merged=[];
     for(let i=0;i<parts.length;i++){
@@ -228,7 +230,15 @@ Please refer to the onboard comms equipment IP address list:
   }
 
   function splitRemark(s){
-    const pre = preprocessRemark(s);
+    if(!s) return [];
+    const txt = String(s);
+    if (txt.startsWith(RAW_PREFIX)) {
+      return txt.slice(RAW_PREFIX.length)
+        .split(/\n+/)
+        .map(t => t.trim())
+        .filter(Boolean);
+    }
+    const pre = preprocessRemark(txt);
     let parts = splitLabeled(pre);
     if(!parts.length) parts = [pre].filter(Boolean);
     parts = parts.map(p => splitNumbered(p)).flat();
