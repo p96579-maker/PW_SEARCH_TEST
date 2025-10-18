@@ -86,15 +86,28 @@
   const labelColonRe = /(?:^|\s)((?:[A-Za-z0-9#&/]+(?:\s+[A-Za-z0-9#&/]+){0,6})\s*:)/g;
   const labelHyphenRe = /(?:^|\s)((?:[A-Za-z][A-Za-z0-9 /&]+?)\s*-\s+)/g;
 
+  
   function preprocessRemark(s){
     if(!s) return s;
     let t = String(s);
-    // Fix: Name: \n VALUE   Management IP:
+
+    // Fix 'Name:' followed by value on next line and then 'Management IP:'
     t = t.replace(/Name:\s*?\n?\s*("?[^"\n]+?"?)\s+Management\s*IP:\s*/gi, (m, name) => {
       return `Name: ${name} | Management IP: `;
     });
+
+    // Insert a space after patterns like "1)4 Car" -> "1) 4 Car"
+    t = t.replace(/(\b\d\))(?=\S)/g, '$1 ');
+
+    // Normalize "2  Car" -> "2) Car" if missing ')'
+    t = t.replace(/\b(\d)\s+(?=[A-Za-z])/g, '$1) ');
+
+    // Ensure 'Remarks:' label is isolated
+    t = t.replace(/\s+Remarks:\s*/g, ' | Remarks: ');
+
     return t;
   }
+
 
   function splitLabeled(s){
     if(!s) return [];
