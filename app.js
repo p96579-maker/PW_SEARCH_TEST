@@ -20,11 +20,24 @@
   }
 
   // ===== Data load =====
-  let DATA=[];
+async function loadData(force=false){
+  const key='apm_data_json_cache_v1';
+  const opt = force? {cache:'no-store'} : {cache:'reload'};
   try{
-    const r=await fetch('assets/data.json?_='+Date.now());
-    DATA = await r.json();
-  }catch(e){ console.error('Data load failed', e); }
+    const r=await fetch('assets/data.json?_='+(force?Date.now():''), opt);
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const j=await r.json();
+    try{ localStorage.setItem(key, JSON.stringify(j)); }catch(e){}
+    return j;
+  }catch(e){
+    console.warn('Network fetch failed, fallback to cache', e);
+    const cached = localStorage.getItem(key);
+    if(cached){ try{ return JSON.parse(cached); }catch(_){} }
+    return [];
+  }
+}
+
+  let DATA = await loadData(false);
   meta.textContent = (DATA?.length||0)+' rows';
   if(loader) setTimeout(()=>loader.classList.add('hidden'), 300);
 
@@ -235,4 +248,16 @@ Remarks: xx = car number e.g. xx = 16 for V#16 and xx = 05 for V#5` },
   document.addEventListener('click',e=>{ if(e.target && e.target.id==='clearBtn'){ selSys.value=''; changeSystem(); selCat.value=''; changeCategory(); selEqp.value=''; results.classList.add('hidden'); count.classList.add('hidden'); showBtn.disabled=true; } });
 
   buildSystem();
+  document.getElementById('updateBtn')?.addEventListener('click', async ()=>{
+    const btn = document.getElementById('updateBtn');
+    const old = btn.textContent; btn.textContent='Updating…'; btn.disabled=true;
+    const loader=document.querySelector('.loader'); loader?.classList.remove('hidden');
+    const data = await loadData(true);
+    window.DATA = DATA = data;
+    meta.textContent = (DATA?.length||0)+' rows';
+    changeSystem(); selCat.value=''; changeCategory(); selEqp.value='';
+    results.classList.add('hidden'); count.classList.add('hidden');
+    setTimeout(()=>loader?.classList.add('hidden'), 250);
+    btn.textContent='Updated'; setTimeout(()=>{btn.textContent=old; btn.disabled=false;}, 1200);
+  });
 })();

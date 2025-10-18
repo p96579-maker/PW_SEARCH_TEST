@@ -6,6 +6,7 @@
   <title>APM Systems Password Search</title>
   <meta name="theme-color" content="#0b1220">
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
 <div class="wrap">
@@ -15,6 +16,7 @@
     <div><label>Category</label><select id="selCategory" aria-label="Category" disabled><option value="">All categories</option></select></div>
     <div><label>Equipment</label><select id="selEquipment" aria-label="Equipment" disabled><option value="">All equipment</option></select></div>
     <div class="toolbar">
+      <button id="updateBtn" class="btn secondary" title="Fetch latest data.json">Update data</button>
       <button id="showBtn" class="btn" disabled>Show results</button>
       <button id="clearBtn" class="btn secondary">Clear</button>
       <span id="count" class="badge hidden"></span>
@@ -25,5 +27,8 @@
 </div>
 <div class="loader"><div class="spinner" aria-label="Loading…"></div></div>
 <script src="app.js"></script>
+<script>
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js"));}
+</script>
 </body>
 </html>
